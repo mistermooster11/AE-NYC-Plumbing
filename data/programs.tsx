@@ -7,8 +7,8 @@ export type ProgramItem = {
 };
 
 export type PartnerItem = {
-  name: string;
-  logo: string;
+  imgSrc: string;
+  alt: string;
   href: string;
 };
 
