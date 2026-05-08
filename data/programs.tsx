@@ -1,7 +1,5 @@
 import type { ReactNode } from "react";
 
-export type NavItem = { href: string; label: string };
-
 export type ProgramItem = {
   title: string;
   content: ReactNode;
@@ -9,16 +7,16 @@ export type ProgramItem = {
 };
 
 export type PartnerItem = {
+  name: string;
+  logo: string;
   href: string;
-  imgSrc: string;
-  alt: string;
 };
 
 export type ProgramsPageData = {
-  navItems: NavItem[];
+  navItems: { href: string; label: string }[];
   hero: {
-    bgImage: string;
     title: string;
+    bgImage: string;
     description: ReactNode;
     breadcrumbParentLabel: string;
     breadcrumbParentHref: string;
@@ -31,146 +29,230 @@ export type ProgramsPageData = {
   partners: PartnerItem[];
 };
 
-export const programsData: ProgramsPageData = {
+const programsData: ProgramsPageData = {
   navItems: [
-    { href: "#flex-module-3", label: "Service Details" },
-    { href: "#flex-module-4", label: "Service Areas"  },
+    { href: "#overview",  label: "Overview"  },
+    { href: "#services",  label: "Services"  },
+    { href: "#contact",   label: "Contact"   },
   ],
 
   hero: {
-    bgImage: "/images/IMG_9750-1024x683.jpg",
-    title: "Our Services",
+    title: "Our Plumbing Services",
+    bgImage: "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Licensed-plumber-1024x683.jpg",
     description: (
       <p>
-        Pipe Monkeys handles every type of drain and sewer issue across
-        Brooklyn, Queens, and Nassau County — from a slow kitchen sink to a
-        fully blocked main line.
+        A&amp;E NYC Plumbing provides a complete range of residential and commercial
+        plumbing services throughout Manhattan and all NYC boroughs — handled by
+        licensed, insured technicians with upfront pricing on every job.
       </p>
     ),
-    breadcrumbParentLabel: "Services",
-    breadcrumbParentHref: "/craft-catalog/",
+    breadcrumbParentLabel: "Home",
+    breadcrumbParentHref: "/",
   },
 
   overview: {
     content: (
       <>
         <p>
-          Every job starts the same way: we diagnose the problem, explain the
-          solution in plain language, and give you the price before any work
-          begins. Our techs carry professional-grade cutters, snakes, augers,
-          and hydro-jetting equipment — so whatever the line throws at us,
-          we&rsquo;re ready.
+          From a dripping faucet to a full building repipe — A&amp;E NYC Plumbing
+          handles it all. Our team is licensed, insured, and available Monday through
+          Sunday, 9am to 9pm. We offer free quotes and free onsite estimates for more
+          complex jobs, so you always know the price before we start.
         </p>
         <p>
-          We work in residential homes, brownstones, pre-war walk-ups, condos,
-          and multi-family buildings. Same-day scheduling available. Near-instant
-          response for emergencies. Call{" "}
-          <a href="tel:7187491830">(718) 749-1830</a> to get started.
+          Below is our full service offering. If you don&apos;t see your specific need
+          listed, call us at (646) 392-7164 — we almost certainly cover it.
         </p>
       </>
     ),
     quickLinks: [
-      { label: "View All Services", href: "/craft-catalog/", icon: "icon-books" },
+      { label: "Call (646) 392-7164", href: "tel:6463927164", icon: "icon-message" },
+      { label: "Contact Us Online",   href: "/contact-us",    icon: "icon-mail"    },
+      { label: "Service Areas",       href: "/service-areas", icon: "icon-info"    },
     ],
   },
 
   programs: [
     {
-      title: "Main Sewer Line Clearing",
+      title: "Drain Repair",
       content: (
         <p>
-          Roots, scale, grease buildup, and heavy blockages in the main line
-          require pro-level equipment — not a standard snake from the hardware
-          store. Our techs use industrial cutters and jetting to restore full
-          flow to your main sewer line and confirm it before leaving. We handle
-          this every day in Brooklyn brownstones, Queens multi-families, and
-          Nassau County homes with long sewer runs.
+          Slow drains, recurring backups, and sewer line issues handled with
+          professional-grade equipment. We diagnose the root cause and fix it — not
+          just push the clog further down the pipe.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/main-sewer-lines",
+      learnMoreHref: "/craft-catalog/drain-repair",
     },
     {
-      title: "Kitchen Sink Drain Clearing",
+      title: "Faucets & Sinks",
       content: (
         <p>
-          Grease, food debris, and soap scum are the most common kitchen culprits
-          — and they build up fast in NYC buildings with heavy daily use. We
-          clear kitchen drains using professional cutters and hydro jetting
-          depending on the severity, leaving the line fully open and grease-free.
-          No mess, no damage to pipes, and no recurring clogs if you go with
-          jetting.
+          Faucet repair and installation for kitchens, bathrooms, and utility areas.
+          A dripping faucet can waste thousands of gallons a year — we fix it fast
+          with upfront pricing.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/kitchen-sinks",
+      learnMoreHref: "/craft-catalog/faucets-and-sinks",
     },
     {
-      title: "Tub & Shower Drain Clearing",
+      title: "Leak Detection",
       content: (
         <p>
-          Hair, soap buildup, and mineral deposits accumulate silently until
-          you&rsquo;re standing in ankle-deep water. Our techs remove the
-          blockage cleanly — no torn-up tile, no chemical damage to pipes — and
-          leave the bathroom exactly as they found it. Shoe covers and drop
-          cloths every time.
+          Professional leak detection for hidden pipe leaks behind walls, under floors,
+          and in ceilings. We locate the source accurately so we can fix it right —
+          without unnecessary demolition.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/tubs-and-showers",
+      learnMoreHref: "/craft-catalog/leak-detection",
     },
     {
-      title: "Toilet Clog Clearing",
+      title: "Toilet Repair",
       content: (
         <p>
-          Stubborn toilet clogs — including foreign objects, excessive paper,
-          and hard-to-reach blockages — are cleared fast with the right auger
-          and technique. We&rsquo;ve retrieved everything from children&rsquo;s
-          toys to full pipe obstructions. No splash, no stress, and we test the
-          flush before we leave.
+          Running toilets, blockages, valve replacements, and full toilet installations.
+          From a simple mechanism repair to a complete replacement — we handle every
+          toilet-related plumbing scenario.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/toilets",
+      learnMoreHref: "/craft-catalog/toilet-repair",
     },
     {
-      title: "Hydro Jetting",
+      title: "Shower & Tub",
       content: (
         <p>
-          Snaking clears a path through the clog. Hydro jetting actually scrubs
-          grease, scale, and buildup off the pipe walls — giving you a like-new
-          interior and dramatically reducing repeat clogs. If you&rsquo;ve been
-          dealing with the same drain backing up every few months, jetting is
-          the long-term fix. Available for kitchen lines, main sewer lines, and
-          commercial buildings.
+          Shower and tub repairs, drain clearing, valve replacement, and full
+          installations. Leaking shower connections cause building damage fast —
+          our team responds quickly.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/hydro-jetting",
+      learnMoreHref: "/craft-catalog/shower-and-tub",
     },
     {
-      title: "Camera Inspection",
+      title: "Water Heater Installation",
       content: (
         <p>
-          Before we recommend a repair or jetting service on your main line, we
-          can run a camera to show you exactly what&rsquo;s in there — root
-          intrusion, pipe damage, grease buildup, or collapsed sections. You see
-          what we see, in real time, so there&rsquo;s no guesswork and no
-          upselling on work you don&rsquo;t need.
+          Water heater repair and replacement for tank and tankless units. If
+          your hot water is unreliable or your bills are climbing, we assess
+          whether repair or replacement makes more sense — and give you the
+          honest answer.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/camera-inspection",
+      learnMoreHref: "/craft-catalog/water-heater-installation",
     },
     {
-      title: "Multi-Unit & Commercial Buildings",
+      title: "Gas Line Installation & Repair",
       content: (
         <p>
-          We work with brownstones, pre-war walk-ups, condos, co-ops, and
-          multi-family buildings across Brooklyn and Queens every single day.
-          Stack drain issues, shared main lines, and building-wide backups are
-          all in our wheelhouse. We coordinate with building managers and
-          minimize disruption to tenants throughout the job.
+          Licensed gas line maintenance, repair, and installation. We handle
+          everything from running a new line for an appliance to emergency
+          leak response — with full NYC code compliance.
         </p>
       ),
-      learnMoreHref: "/craft-catalog/multi-unit-buildings",
+      learnMoreHref: "/craft-catalog/gas-line-services",
+    },
+    {
+      title: "Piping & Re-piping",
+      content: (
+        <p>
+          Full repiping projects for aging buildings, targeted pipe repairs,
+          and new pipe installation. Older NYC buildings with galvanized or
+          lead pipes benefit most — eliminating recurring repair costs permanently.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/piping-and-repiping",
+    },
+    {
+      title: "Water Line Repair & Installation",
+      content: (
+        <p>
+          Water line break repair, replacement, and new installation. A failing
+          water line causes serious building damage if caught late — we locate
+          and repair it fast.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/water-line-services",
+    },
+    {
+      title: "Water Pressure Repair",
+      content: (
+        <p>
+          High or low water pressure diagnosis and correction. Unregulated high
+          pressure stresses every pipe joint and appliance in your building.
+          We calibrate the system and protect your plumbing infrastructure.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/water-pressure-repair",
+    },
+    {
+      title: "Water Filter & Purification",
+      content: (
+        <p>
+          Installation and service for all water filtration and purification
+          systems — from under-sink units to whole-building solutions. Clean
+          water, properly plumbed.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/water-filtration",
+    },
+    {
+      title: "Kitchen & Bath Plumbing",
+      content: (
+        <p>
+          Full kitchen and bath plumbing — supply lines, drain lines, fixture
+          installation, and renovation-ready rough-in. We work independently
+          or alongside your renovation contractor.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/kitchen-and-bath-plumbing",
+    },
+    {
+      title: "Garbage Disposal",
+      content: (
+        <p>
+          Garbage disposal repair and replacement. Whether the unit has stopped
+          grinding, is leaking, or trips its reset repeatedly — we diagnose and
+          fix it with proper drain connections.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/garbage-disposal",
+    },
+    {
+      title: "Dishwasher Repair",
+      content: (
+        <p>
+          Plumbing-related dishwasher repairs including drain line connections,
+          supply line issues, and inlet valve failures. Many dishwasher problems
+          are actually plumbing problems — we know the difference.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/dishwasher-repair",
+    },
+    {
+      title: "Plumbing Fixtures",
+      content: (
+        <p>
+          Repair and installation of all plumbing fixtures — valves, shutoffs,
+          supply connections, and fittings. Properly installed fixtures last
+          decades. We install them right the first time.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/plumbing-fixtures",
+    },
+    {
+      title: "Residential Plumbing",
+      content: (
+        <p>
+          Full-service residential plumbing for NYC apartments and homes.
+          Emergency repairs, routine maintenance, system upgrades — licensed
+          and insured, Mon–Sun 9am–9pm.
+        </p>
+      ),
+      learnMoreHref: "/craft-catalog/residential-plumbing",
     },
   ],
 
-  // No external partners — use service area neighborhoods instead
   partners: [],
 };
+
+export default programsData;

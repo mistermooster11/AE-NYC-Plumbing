@@ -3,33 +3,34 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { useInView } from "framer-motion";
 
-// TODO: Replace placeholder reviews with real Google reviews from Pipe Monkeys.
-// Daniel Pipitone is confirmed real. The others are placeholders — request from client.
+// TODO: Replace with real Google reviews from A&E NYC Plumbing client.
+// All three reviews below are placeholders — request actual Google reviews from client.
 const testimonials = [
   {
-    id: "daniel-pipitone",
+    id: "manhattan-resident",
+    // TODO: Replace with a real Google review from client
     quote:
-      "Professional service with a very fair price. They send you info about the assigned technician in advance and showed up exactly on time. They cleaned up nicely after snaking a drain line on the 2nd floor of a 3 story building. Forget Roto Rooter — Pipe Monkeys will be my new go-to for plumbing needs.",
-    name: "Daniel Pipitone",
-    position: "Brooklyn Homeowner",
+      "Called A&E NYC Plumbing for a backed-up drain in my Manhattan apartment. They arrived within a few hours, fixed the issue quickly, and were completely upfront about the price. Friendly, professional, and clean — highly recommend.",
+    name: "Google Reviewer",
+    position: "Manhattan Resident",
     platform: "Google Review ★★★★★",
   },
   {
-    id: "maria-santos",
+    id: "nyc-homeowner",
     // TODO: Replace with a real Google review from client
     quote:
-      "Called at 9am with a completely backed up kitchen drain. Tech was here by 11, cleared it in under an hour. He explained exactly what caused the clog and how to prevent it. Pricing was upfront and fair — no pushing extras I didn't need. Will absolutely use them again.",
-    name: "Maria Santos",
-    position: "Queens Homeowner",
+      "Had a leaking pipe under the kitchen sink that had been dripping for weeks. A&E came out same day, found the issue immediately, and gave me a fair price before touching anything. Fast work, no mess left behind. Will call them again.",
+    name: "Google Reviewer",
+    position: "NYC Homeowner",
     platform: "Google Review ★★★★★",
   },
   {
-    id: "james-oconnor",
+    id: "building-super",
     // TODO: Replace with a real Google review from client
     quote:
-      "Had a main line backup that two other companies couldn't fully clear. Pipe Monkeys came the same afternoon, ran a camera first so we could see exactly what was in there, then jetted it clean. You could see the difference on the camera footage after. Highly recommend for any serious sewer issue.",
-    name: "James O'Connor",
-    position: "Nassau County Homeowner",
+      "We manage a 12-unit building in the Bronx and have used A&E NYC Plumbing for everything from toilet repairs to a full water heater replacement. They show up when they say, they explain what they find, and their pricing is always straightforward. Reliable service.",
+    name: "Google Reviewer",
+    position: "NYC Building Manager",
     platform: "Google Review ★★★★★",
   },
 ];
@@ -179,7 +180,7 @@ export default function Testimonial() {
           className={`h3 ia-white fadeInUpS wow${vis}`}
           style={{ animationDelay: "0.1s" }}
         >
-          Real Reviews From Real Neighbors
+          Real Reviews From Real New Yorkers
         </h2>
       </div>
 

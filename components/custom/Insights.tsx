@@ -54,8 +54,9 @@ export default function Insights() {
             <h2 className="h3 ia-white">Our Most Common Services</h2>
             <div className="content-entry ia-white max-w-2xl">
               <p className="ia-white">
-                From a single backed-up sink to a full main line blockage, select a service below
-                to see how we handle it — and what you can expect from start to finish.
+                From a dripping faucet to a full building repipe — select a service below
+                to see how A&E NYC Plumbing handles it and what you can expect from
+                diagnosis through clean-up.
               </p>
             </div>
           </div>

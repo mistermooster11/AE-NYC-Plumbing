@@ -1,16 +1,8 @@
 import type { ChannelPageData } from "@/components/custom/channel/types";
-import associations  from "./associations";
-import corrections   from "./corrections";
-import highSchools   from "./high-schools";
-import postsecondary from "./postsecondary";
-import pipemonkeys   from "./pipemonkeys";
+import aeNycPlumbing from "./ae-nyc-plumbing";
 
 const channelDataMap: Record<string, ChannelPageData> = {
-  associations,
-  corrections,
-  "high-schools": highSchools,
-  postsecondary,
-  pipemonkeys,
+  "ae-nyc-plumbing": aeNycPlumbing,
 };
 
 export function getChannelData(slug: string): ChannelPageData | null {

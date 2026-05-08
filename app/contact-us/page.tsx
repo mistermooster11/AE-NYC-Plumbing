@@ -9,25 +9,39 @@ import CraftHero from "@/components/custom/craft-catalog/CraftHero";
 
 const serviceAreas = [
   {
+    region: "Manhattan",
+    description:
+      "Our home base. We serve all Manhattan neighborhoods — from the Upper West Side and Harlem to Midtown, Chelsea, the Village, and Lower Manhattan. Pre-war buildings, co-ops, condos, and commercial spaces.",
+    neighborhoods:
+      "Upper West Side • Upper East Side • Harlem • East Harlem • Washington Heights • Inwood • Morningside Heights • Hamilton Heights • Midtown • Hell's Kitchen • Murray Hill • Gramercy • Chelsea • Greenwich Village • West Village • SoHo • Tribeca • Lower East Side • Financial District • and more",
+  },
+  {
     region: "Brooklyn",
     description:
-      "From brownstones in Park Slope to pre-war buildings in Williamsburg and multi-family homes in Bay Ridge, we know Brooklyn plumbing inside and out. Most Brooklyn jobs are available same-day.",
+      "We serve all Brooklyn neighborhoods — from dense brownstone blocks in Park Slope and Bed-Stuy to waterfront buildings in DUMBO and Red Hook, and residential streets throughout South Brooklyn.",
     neighborhoods:
-      "Williamsburg • Greenpoint • Bushwick • Bed-Stuy • Crown Heights • Park Slope • Sunset Park • Bay Ridge • Bensonhurst • Dyker Heights • Gravesend • Sheepshead Bay • Coney Island • and more",
+      "Williamsburg • Greenpoint • Bushwick • Bed-Stuy • Crown Heights • Park Slope • Gowanus • Carroll Gardens • Red Hook • DUMBO • Downtown Brooklyn • Sunset Park • Bay Ridge • Bensonhurst • Dyker Heights • Gravesend • Sheepshead Bay • Coney Island • Flatbush • East Flatbush • Canarsie • and more",
   },
   {
     region: "Queens",
     description:
-      "Queens has one of the widest mixes of homes in NYC — single-family houses in Whitestone and Bayside, apartment buildings in Astoria and LIC, and everything in between. Our team handles all of it.",
+      "Queens has one of the most diverse housing stocks in NYC — from attached single-family homes in Bayside and Forest Hills to large apartment buildings in Astoria and Flushing. Our licensed plumbers serve them all.",
     neighborhoods:
-      "Astoria • LIC • Maspeth • Flushing • Whitestone • Bayside • Forest Hills • Rego Park • Jackson Heights • Elmhurst • Middle Village • and more",
+      "Astoria • Long Island City • Maspeth • Sunnyside • Woodside • Jackson Heights • Elmhurst • Flushing • Whitestone • Bayside • Forest Hills • Rego Park • Jamaica • South Ozone Park • Ozone Park • Howard Beach • Middle Village • Ridgewood • Glendale • Kew Gardens • and more",
   },
   {
-    region: "Nassau County",
+    region: "The Bronx",
     description:
-      "Nassau County homes often have longer main lines and mature trees that cause root intrusion and slow sewer drains. Our techs know exactly where Nassau lines tend to fail and how to clear them fast.",
+      "We cover all Bronx neighborhoods for residential and commercial plumbing work — from large apartment buildings in the South Bronx to single-family homes in Riverdale and Pelham Bay.",
     neighborhoods:
-      "Valley Stream • Elmont • Franklin Square • West Hempstead • Hempstead • Garden City • Mineola • New Hyde Park • Floral Park • Rockville Centre • Oceanside • Baldwin • Freeport • Merrick • Bellmore • Wantagh • Seaford • Massapequa • Levittown • East Meadow • Uniondale • Lynbrook • Malverne • Hewlett • and more",
+      "South Bronx • Mott Haven • Hunts Point • Fordham • Tremont • Belmont • Riverdale • Kingsbridge • Norwood • Woodlawn • Pelham Bay • Co-op City • Throggs Neck • Morris Park • Soundview • and more",
+  },
+  {
+    region: "Staten Island",
+    description:
+      "We serve Staten Island for all residential and commercial plumbing needs — including the North Shore, Mid-Island, and South Shore neighborhoods.",
+    neighborhoods:
+      "St. George • Stapleton • Tompkinsville • Clifton • Rosebank • New Brighton • West Brighton • Port Richmond • Mariners Harbor • New Springville • Willowbrook • Tottenville • Great Kills • Eltingville • Annadale • and more",
   },
 ];
 
@@ -60,7 +74,7 @@ function AreaSection({
   );
 }
 
-/* ── Styled submit button (matches site-wide ia-btn animation) ── */
+/* ── Styled submit button ── */
 
 function SubmitBtn() {
   const btnRef = useWowAnimation<HTMLButtonElement>("contact-submit-btn", true);
@@ -98,14 +112,14 @@ export default function ContactPage() {
   return (
     <main className="pt-76 max-[1150px]:pt-[6.2rem]">
 
-      {/* ── Hero — image masthead matching service detail pages ── */}
+      {/* ── Hero ── */}
       <CraftHero
         title="Contact Us"
-        bgImage="/images/IMG_9688-1024x682.jpg"
+        bgImage="https://www.topplumbernyc.com/wp-content/uploads/2025/06/Licensed-plumber-1024x683.jpg"
         breadcrumbs={[{ label: "Contact Us" }]}
       />
 
-      {/* ── Contact Form ─────────────────────────────────────────── */}
+      {/* ── Contact Form ── */}
       <div ref={formRef} className={`content-block-flex flex-module fadeIn wow${formVis}`}>
         <div className="inner inner--slim-1172">
           <div className="content-block-head wide">
@@ -121,16 +135,16 @@ export default function ContactPage() {
               style={{ animationDelay: "0.15s" }}
             >
               Fill out the form below or call us directly at{" "}
-              <strong>(718) 749-1830</strong>. We follow up fast — usually
-              within the hour.
+              <strong>(646) 392-7164</strong>. We follow up fast — usually
+              within the hour. Available Mon–Sun, 9am–9pm.
             </p>
           </div>
 
           <div className="content-block-in wide">
             <div className="content-block-text content-entry p2 full-width">
               {/*
-                TODO: Replace this form with Pipe Monkeys' preferred form solution
-                (HubSpot, Gravity Forms, JotForm, etc.).
+                TODO: Replace this form with A&E NYC Plumbing's preferred form solution
+                (Gravity Forms, JotForm, HubSpot, etc.).
               */}
               <form
                 action="#"
@@ -176,13 +190,22 @@ export default function ContactPage() {
                     style={{ padding: "0.75rem 1rem", border: "1px solid #ccc", borderRadius: "4px", fontSize: "1.4rem", background: "white" }}
                   >
                     <option value="">Select a service…</option>
-                    <option>Main Sewer Line</option>
-                    <option>Kitchen Sink Drain</option>
-                    <option>Tub &amp; Shower Drain</option>
-                    <option>Toilet</option>
-                    <option>Hydro Jetting</option>
-                    <option>Camera Inspection</option>
-                    <option>Multi-Unit Building</option>
+                    <option>Drain Repair</option>
+                    <option>Faucets &amp; Sinks</option>
+                    <option>Leak Detection</option>
+                    <option>Toilet Repair</option>
+                    <option>Shower &amp; Tub</option>
+                    <option>Water Heater Installation</option>
+                    <option>Gas Line Services</option>
+                    <option>Piping &amp; Re-piping</option>
+                    <option>Water Line Repair &amp; Installation</option>
+                    <option>Water Pressure Repair</option>
+                    <option>Water Filter &amp; Purification</option>
+                    <option>Kitchen &amp; Bath Plumbing</option>
+                    <option>Garbage Disposal</option>
+                    <option>Dishwasher Repair</option>
+                    <option>Plumbing Fixtures</option>
+                    <option>Residential Plumbing</option>
                     <option>Not Sure / Other</option>
                   </select>
                 </div>
@@ -191,7 +214,7 @@ export default function ContactPage() {
                   <label htmlFor="message" className="p3 ia-medium">Message</label>
                   <textarea
                     id="message" name="message" rows={4}
-                    placeholder="Describe the issue — what's happening and where in the building?"
+                    placeholder="Describe the issue — what's happening and where?"
                     style={{ padding: "0.75rem 1rem", border: "1px solid #ccc", borderRadius: "4px", fontSize: "1.4rem", resize: "vertical" }}
                   />
                 </div>
@@ -205,7 +228,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* ── Service Areas (stacked) ───────────────────────────────── */}
+      {/* ── Service Areas ── */}
       <div ref={areasRef} className={`content-block-flex flex-module fadeIn wow${areasVis}`}>
         <div className="inner inner--slim-1172">
           <h2
@@ -219,9 +242,8 @@ export default function ContactPage() {
             style={{ animationDelay: "0.2s", marginBottom: "3rem" }}
           >
             <p>
-              We cover all of Brooklyn, Queens, and Nassau County. If you&apos;re
-              not sure whether we serve your neighborhood, call us — we almost
-              certainly do.
+              We cover all five NYC boroughs. If you&apos;re not sure whether we serve
+              your specific neighborhood, call us — we almost certainly do.
             </p>
           </div>
 
@@ -233,7 +255,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* ── Google Map — below all neighborhoods ─────────────────── */}
+      {/* ── Google Map ── */}
       <div ref={mapRef} className={`flex-module fadeIn wow${mapVis}`}>
         <div className="inner inner--slim-1172">
           <h2
@@ -243,9 +265,10 @@ export default function ContactPage() {
             Our Service Area
           </h2>
           <div className={`fadeInUpS wow${mapVis}`} style={{ animationDelay: "0.2s" }}>
+            {/* [TODO: Replace with Google Maps embed centered on A&E NYC Plumbing service area or business address] */}
             <iframe
-              title="Pipe Monkeys Service Area — Brooklyn, Queens, Nassau County"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d96708.34194958338!2d-73.87153600000001!3d40.65751950000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus"
+              title="A&E NYC Plumbing Service Area — Manhattan and All NYC Boroughs"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d96922.64072865752!2d-74.00594200000001!3d40.7127281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus"
               width="100%"
               height="480"
               style={{ border: 0, display: "block", borderRadius: "4px" }}

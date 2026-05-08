@@ -2,9 +2,9 @@ import CraftCatalogHero from "@/components/custom/craft-catalog/CraftCatalogHero
 import CraftCatalogClient from "@/components/custom/craft-catalog/CraftCatalogClient";
 
 export const metadata = {
-  title: "Our Services – Pipe Monkeys",
+  title: "Our Services – A&E NYC Plumbing",
   description:
-    "Pipe Monkeys offers drain clearing and plumbing services across Brooklyn, Queens, and Nassau County. From kitchen sinks to main sewer lines — same-day service, upfront pricing.",
+    "A&E NYC Plumbing offers drain clearing and plumbing services across Brooklyn, Queens, and Nassau County. From kitchen sinks to main sewer lines — same-day service, upfront pricing.",
 };
 
 export default function CraftCatalogPage() {

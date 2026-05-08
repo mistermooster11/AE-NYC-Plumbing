@@ -2,218 +2,151 @@
 
 import { useRef, useState } from "react";
 import { useInView } from "framer-motion";
-import SecondaryButton from "@/components/custom/buttons/SecondaryButton";
 
-interface FaqItem {
-  title: string;
-  content: React.ReactNode;
-  link?: { label: string; href: string };
-}
-
-const faqItems: FaqItem[] = [
+const faqItems = [
   {
-    title: "How quickly can you get here?",
-    content: (
-      <p>
-        Most calls are scheduled the same day, and we offer near-instant
-        response for urgent clogs. Timing depends on your exact neighborhood,
-        but we move fast. Call us at{" "}
-        <a href="tel:7187491830" className="ia-link">(718) 749-1830</a>{" "}
-        and we&apos;ll give you an accurate ETA on the spot.
-      </p>
-    ),
+    id: "faq-1",
+    question: "What areas do you serve?",
+    answer:
+      "A&E NYC Plumbing serves Manhattan and all five NYC boroughs — including Brooklyn, Queens, The Bronx, and Staten Island. If you're not sure we cover your neighborhood, just call us at (646) 392-7164 and we'll confirm right away.",
   },
   {
-    title: "Do you give upfront pricing?",
-    content: (
-      <p>
-        Always. We diagnose the issue, explain the solution, and give you the
-        price before any work starts. No surprises, no upsell games. What we
-        quote is what you pay — period.
-      </p>
-    ),
+    id: "faq-2",
+    question: "Do you offer free quotes?",
+    answer:
+      "Yes. We provide free quotes over the phone for most jobs, and free onsite estimates for more complex projects. You'll know the full price — parts and labor — before any work begins. We don't start without your approval.",
   },
   {
-    title: "What tools do you use to clear drains?",
-    content: (
-      <p>
-        We carry professional cutters, snakes, augers, and hydro-jetting
-        equipment on every truck. Your tech will choose the safest and most
-        effective method for your specific line and problem — and explain why
-        before starting.
-      </p>
-    ),
+    id: "faq-3",
+    question: "Are you licensed and insured?",
+    answer:
+      "Yes. A&E NYC Plumbing is fully licensed and insured. Our team handles all types of residential and commercial plumbing work in compliance with NYC codes and standards. Licensed plumbers on every job — no exceptions.",
   },
   {
-    title: "When should I consider hydro jetting instead of snaking?",
-    content: (
-      <p>
-        Snaking clears a path through the clog. Jetting actually scrubs grease,
-        scale, and buildup off the pipe walls — giving you a cleaner line and
-        much longer-lasting results. If you get repeat clogs in the same drain,
-        jetting is usually the right call. We&apos;ll tell you honestly which
-        one makes sense for your situation.
-      </p>
-    ),
+    id: "faq-4",
+    question: "What are your hours?",
+    answer:
+      "We're available Monday through Sunday, 9am to 9pm. Call us at (646) 392-7164 to schedule service or get a free quote.",
   },
   {
-    title: "Do you service apartments and multi-unit buildings?",
-    content: (
-      <p>
-        All the time. We work with brownstones, pre-war buildings, walk-ups,
-        condos, co-ops, and multi-family homes across Brooklyn, Queens, and
-        Nassau County every day. We coordinate with building managers and work
-        to minimize disruption to other tenants.
-      </p>
-    ),
+    id: "faq-5",
+    question: "Do you handle commercial plumbing as well as residential?",
+    answer:
+      "Yes. We work in apartments, homes, multi-unit buildings, and commercial spaces across NYC. Our team is technically prepared to install or repair gas lines, water lines, heating systems, and all plumbing structures in both residential and commercial properties.",
   },
   {
-    title: "What areas do you serve?",
-    content: (
-      <>
-        <p>We serve all of Brooklyn, Queens, and Nassau County including:</p>
-        <p>
-          <strong>Brooklyn:</strong> Williamsburg, Greenpoint, Bushwick,
-          Bed-Stuy, Crown Heights, Park Slope, Sunset Park, Bay Ridge,
-          Bensonhurst, Dyker Heights, Gravesend, Sheepshead Bay, Coney Island
-          and more.
-        </p>
-        <p>
-          <strong>Queens:</strong> Astoria, LIC, Maspeth, Flushing, Whitestone,
-          Bayside, Forest Hills, Rego Park, Jackson Heights, Elmhurst, Middle
-          Village and more.
-        </p>
-        <p>
-          <strong>Nassau County:</strong> Valley Stream, Elmont, Franklin
-          Square, West Hempstead, Hempstead, Garden City, Mineola, New Hyde
-          Park, Rockville Centre, Oceanside, Freeport, Merrick, Bellmore,
-          Levittown, East Meadow and more.
-        </p>
-      </>
-    ),
+    id: "faq-6",
+    question: "How quickly can you come out?",
+    answer:
+      "We offer fast turnaround and work within your schedule. For most jobs, we can get someone out the same day or the next day. Call us directly at (646) 392-7164 and we'll give you an honest timeframe based on current availability.",
   },
   {
-    title: "Do you clean up after the job?",
-    content: (
-      <p>
-        Yes — always. Every tech wears shoe covers, lays down drop cloths, and
-        cleans the workspace before leaving. We test the flow, show you the
-        results, and make sure your home is cleaner than we found it. That
-        &apos;s not a bonus — it&apos;s standard.
-      </p>
-    ),
+    id: "faq-7",
+    question: "Can you handle gas line work?",
+    answer:
+      "Yes. Our licensed technicians handle gas line installation, repair, and maintenance. All gas work is performed in compliance with NYC safety standards and code requirements. If you smell gas or suspect a leak, call us immediately — gas issues are treated as emergencies.",
+  },
+  {
+    id: "faq-8",
+    question: "What should I do if I have a plumbing emergency?",
+    answer:
+      "Call us at (646) 392-7164. For gas leaks, turn off your gas supply valve if accessible and leave the building before calling. For water leaks, shut off the main water valve if you can locate it. We'll walk you through immediate steps over the phone and get a technician dispatched as quickly as possible.",
   },
 ];
 
-export default function GeneralFaqsPage() {
-  const [openIndex, setOpenIndex] = useState<number>(0);
-
-  const heroRef = useRef<HTMLDivElement>(null);
-  const accordionRef = useRef<HTMLDivElement>(null);
-  const donationRef = useRef<HTMLDivElement>(null);
-
-  const heroInView = useInView(heroRef, { once: true, margin: "0px 0px -60px 0px" });
-  const accordionInView = useInView(accordionRef, { once: true, margin: "0px 0px -60px 0px" });
-  const donationInView = useInView(donationRef, { once: true, margin: "0px 0px -60px 0px" });
-
-  const toggle = (idx: number) =>
-    setOpenIndex((prev) => (prev === idx ? -1 : idx));
+export default function FAQsPage() {
+  const [openId, setOpenId] = useState<string | null>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
+  const vis = inView ? " is-visible" : "";
 
   return (
-    <main>
-      <div id="content">
+    <main className="pt-76 max-[1150px]:pt-[6.2rem]">
+      <div ref={ref} className="content-block-flex flex-module">
+        <div className="inner inner--slim-1172">
 
-        {/* ── Hero ── */}
-        <div
-          ref={heroRef}
-          className={`hero-org flex-module wow fadeIn${heroInView ? " is-visible" : ""}`}
-        >
-          <div className="hero-org__top ia-bg-dark">
-            <div className="inner inner--slim-1172">
-              <div className={`breadcrumbs ia-sky wow fadeInUpS${heroInView ? " is-visible" : ""}`}>
-                <span><a href="/" className="home ia-link">Home</a></span>{" "}
-                <em>&gt;</em>{" "}
-                <span className="post post-page current-item">FAQs</span>
-              </div>
-              <h1
-                className={`ia-white ia-margin-0 wow fadeInUpS${heroInView ? " is-visible" : ""}`}
-                style={{ animationDelay: "0.1s" }}
-              >
-                Frequently Asked Questions
-              </h1>
-            </div>
+          <div className={`content-block-head wide fadeInUpS wow${vis}`}>
+            <div className="sub-heading">Help Center</div>
+            <h1 className="h2">Frequently Asked Questions</h1>
+            <p className="p2">
+              Answers to the most common questions about A&amp;E NYC Plumbing services,
+              pricing, and coverage. Don&apos;t see your question?{" "}
+              <a href="tel:6463927164" className="ia-link">Call us at (646) 392-7164</a>.
+            </p>
           </div>
-        </div>
 
-        {/* ── Accordion ── */}
-        <div className="accordion-module flex-module">
-          <div className="inner inner--slim-1172">
-            <div
-              ref={accordionRef}
-              className={`accordion-wrap-flex wow fadeInUpS${accordionInView ? " is-visible" : ""}`}
-              style={{ animationDelay: "0.3s" }}
-            >
-              {faqItems.map((item, idx) => {
-                const isOpen = openIndex === idx;
-                return (
-                  <div className="accordion-item-flex" key={idx}>
-                    <a
-                      className={`accordion-title-flex h4${isOpen ? " current" : ""}`}
-                      href="#"
-                      onClick={(e) => { e.preventDefault(); toggle(idx); }}
-                      aria-expanded={isOpen}
+          <div className="content-block-in wide">
+            <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
+              {faqItems.map((item, i) => (
+                <div
+                  key={item.id}
+                  className={`fadeInUpS wow${vis}`}
+                  style={{
+                    animationDelay: `${i * 0.06}s`,
+                    borderBottom: "1px solid #e0e0e0",
+                  }}
+                >
+                  <button
+                    onClick={() => setOpenId(openId === item.id ? null : item.id)}
+                    style={{
+                      width: "100%",
+                      textAlign: "left",
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      padding: "2rem 0",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      gap: "1.5rem",
+                    }}
+                  >
+                    <span className="p1" style={{ fontWeight: 600 }}>
+                      {item.question}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: "2rem",
+                        color: "#101d2b",
+                        flexShrink: 0,
+                        transform: openId === item.id ? "rotate(45deg)" : "rotate(0deg)",
+                        transition: "transform 0.2s ease",
+                        lineHeight: 1,
+                      }}
                     >
-                      {item.title}
-                      <i className="icon-arr-down" aria-hidden="true" />
-                    </a>
-                    <div className={`accordion-info-flex${isOpen ? " open" : ""}`}>
-                      <div className="content-entry">{item.content}</div>
-                      {item.link && (
-                        <a href={item.link.href} className="ia-link ia-link--arrow">
-                          <i className="icon-arrow-right" aria-hidden="true" />
-                          <span>{item.link.label}</span>
-                        </a>
-                      )}
+                      +
+                    </span>
+                  </button>
+                  {openId === item.id && (
+                    <div className="content-entry p2 ia-dark" style={{ paddingBottom: "2rem" }}>
+                      <p>{item.answer}</p>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        {/* ── CTA ── */}
-        <div
-          ref={donationRef}
-          className={`front-donation ia-bg-sky flex-module wow fadeInUpS${donationInView ? " is-visible" : ""}`}
-        >
-          <div className="inner inner--slim-1172">
-            <div className={`sub-heading wow fadeInUpS${donationInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
-              Still have questions?
-            </div>
-            <h2 className={`h2 wow fadeInUpS${donationInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
-              We&apos;re Here to Help
-            </h2>
-            <div className={`front-donation__in wow fadeInUpS${donationInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
-              <div className="content-entry">
-                <p>
-                  Call us at <strong>(718) 749-1830</strong> — our team picks up fast
-                  and can answer any question, schedule a same-day visit, or give you
-                  an honest assessment over the phone.
-                </p>
-              </div>
-              <div className="front-donation__btn-wrap">
-                <div className="front-donation__btn">
-                  <SecondaryButton
-                    label="Call (718) 749-1830"
-                    href="tel:7187491830"
-                  />
+                  )}
                 </div>
-              </div>
+              ))}
             </div>
           </div>
-        </div>
 
+        </div>
+      </div>
+
+      {/* CTA strip */}
+      <div className="flex-module ia-bg-sky" style={{ padding: "5rem 0" }}>
+        <div className="inner inner--slim-1172" style={{ textAlign: "center" }}>
+          <div className="sub-heading">Still Have Questions?</div>
+          <h2 className="h3" style={{ marginBottom: "1.5rem" }}>
+            Call Us — We&apos;re Here Mon–Sun, 9am–9pm
+          </h2>
+          <p className="p2" style={{ marginBottom: "2.5rem" }}>
+            Our team is happy to answer any question over the phone and provide
+            a free quote for your job.
+          </p>
+          <a href="tel:6463927164" className="ia-btn">
+            <em className="ia-b ia-b-1" /><em className="ia-b ia-b-2" />
+            <em className="ia-b ia-b-3" /><em className="ia-b ia-b-4" />
+            <span>Call (646) 392-7164</span>
+          </a>
+        </div>
       </div>
     </main>
   );

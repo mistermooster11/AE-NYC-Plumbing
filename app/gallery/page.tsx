@@ -2,276 +2,100 @@
 
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-
-/* ── Gallery Data ────────────────────────────────────────────── */
+import CraftHero from "@/components/custom/craft-catalog/CraftHero";
 
 const galleryItems = [
   {
-    id: "gallery-1",
-    label: "Main Sewer Line — Crown Heights, Brooklyn",
-    beforeAlt: "Blocked main sewer line before clearing",
-    afterAlt:  "Clear main sewer line after hydro jetting",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
-    before: "/images/IMG_9688-1024x682.jpg",
-    after:  "/images/IMG_9750-1024x683.jpg",
-    category: "Main Sewer Line",
+    label: "Drain Repair — Manhattan Apartment",
+    image: "/images/IMG_9688-1024x682.jpg",
+    // [TODO: Replace with real A&E NYC Plumbing drain repair job photo]
   },
   {
-    id: "gallery-2",
-    label: "Kitchen Drain — Astoria, Queens",
-    beforeAlt: "Grease-clogged kitchen drain before clearing",
-    afterAlt:  "Kitchen drain fully cleared and flowing",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
-    before: "/images/iStock-530983109-1.jpg",
-    after:  "/images/IMG_9688-1024x682.jpg",
-    category: "Kitchen Sink",
+    label: "Water Heater Installation — NYC Residential",
+    image: "/images/IMG_9750-1024x683.jpg",
+    // [TODO: Replace with real A&E NYC Plumbing water heater photo]
   },
   {
-    id: "gallery-3",
-    label: "Hydro Jetting — Nassau County Home",
-    beforeAlt: "Pipe interior with grease buildup",
-    afterAlt:  "Clean pipe interior after hydro jetting",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
-    before: "/images/IMG_9750-1024x683.jpg",
-    after:  "/images/iStock-530983109-1.jpg",
-    category: "Hydro Jetting",
+    label: "Faucet & Sink Repair — Manhattan Kitchen",
+    image: "/images/IMG_9688-1024x682.jpg",
+    // [TODO: Replace with real A&E NYC Plumbing faucet repair photo]
   },
   {
-    id: "gallery-4",
-    label: "Tub Drain — Bay Ridge, Brooklyn",
-    beforeAlt: "Hair-clogged tub drain before clearing",
-    afterAlt:  "Tub drain cleared with no damage to tile",
-    // [TODO: Replace with real before/after job photos from Pipe Monkeys]
-    before: "/images/IMG_9688-1024x682.jpg",
-    after:  "/images/IMG_9750-1024x683.jpg",
-    category: "Tub & Shower",
+    label: "Gas Line Installation — NYC Building",
+    image: "/images/IMG_9750-1024x683.jpg",
+    // [TODO: Replace with real A&E NYC Plumbing gas line photo]
   },
 ];
 
-/* ── Sub-components ─────────────────────────────────────────── */
-
-function GalleryCard({ item, delay }: { item: typeof galleryItems[number]; delay: string }) {
+export default function GalleryPage() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
   const vis = inView ? " is-visible" : "";
 
   return (
-    <div
-      ref={ref}
-      className={`fadeInUpS wow${vis}`}
-      style={{
-        animationDelay: delay,
-        background: "#fff",
-        border: "1px solid #e8e8e8",
-        borderRadius: "6px",
-        overflow: "hidden",
-        padding: "2rem",
-      }}
-    >
-      {/* Category badge */}
-      <span
-        style={{
-          display: "inline-block",
-          marginBottom: "1.5rem",
-          padding: "0.4rem 1.2rem",
-          background: "var(--ia-sky, #a1c5d3)",
-          borderRadius: "4px",
-          fontSize: "1.2rem",
-          fontWeight: 600,
-          color: "#1a2a3a",
-        }}
-      >
-        {item.category}
-      </span>
-
-      {/* Before / After image pair — large, equal height */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "1.2rem",
-          marginBottom: "1.5rem",
-        }}
-      >
-        <div>
-          <div
-            style={{
-              background: `url(${item.before}) no-repeat 50% 50% / cover`,
-              backgroundColor: "#1a2a3a",
-              /* tall on desktop, still readable on mobile */
-              aspectRatio: "4 / 3",
-              borderRadius: "4px",
-              width: "100%",
-            }}
-            role="img"
-            aria-label={item.beforeAlt}
-          />
-          <p style={{ marginTop: "0.6rem", textAlign: "center", fontWeight: 700, fontSize: "1.4rem" }}>Before</p>
-        </div>
-        <div>
-          <div
-            style={{
-              background: `url(${item.after}) no-repeat 50% 50% / cover`,
-              backgroundColor: "#1a2a3a",
-              aspectRatio: "4 / 3",
-              borderRadius: "4px",
-              width: "100%",
-            }}
-            role="img"
-            aria-label={item.afterAlt}
-          />
-          <p style={{ marginTop: "0.6rem", textAlign: "center", fontWeight: 700, fontSize: "1.4rem" }}>After</p>
-        </div>
-      </div>
-
-      <h3 className="h5 ia-margin-0" style={{ fontSize: "1.8rem" }}>{item.label}</h3>
-    </div>
-  );
-}
-
-/* ── Page ───────────────────────────────────────────────────── */
-
-export default function GalleryPage() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const heroInView = useInView(heroRef, { once: true, margin: "0px 0px -60px 0px" });
-  const gridRef = useRef<HTMLDivElement>(null);
-  const gridInView = useInView(gridRef, { once: true, margin: "0px 0px -60px 0px" });
-  const ctaRef = useRef<HTMLDivElement>(null);
-  const ctaInView = useInView(ctaRef, { once: true, margin: "0px 0px -60px 0px" });
-
-  const heroVis = heroInView ? " is-visible" : "";
-
-  return (
     <main className="pt-76 max-[1150px]:pt-[6.2rem]">
+      <CraftHero
+        title="Our Work"
+        bgImage="https://www.topplumbernyc.com/wp-content/uploads/2025/06/Licensed-plumber-1024x683.jpg"
+        breadcrumbs={[{ label: "Gallery" }]}
+      />
 
-      {/* ── Hero ── */}
-      <div ref={heroRef} className={`hero-org flex-module fadeIn wow${heroVis}`}>
-        <div className="hero-org__top ia-bg-dark">
-          <div className="inner inner--slim-1172">
-            <div className={`breadcrumbs ia-sky fadeInUpS wow${heroVis}`}>
-              <span><a href="/">Home</a></span>
-              <em>&gt;</em>
-              <span className="post post-page current-item">Gallery</span>
-            </div>
-            <h1 className={`ia-white ia-margin-0 fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-              Before &amp; After Gallery
-            </h1>
-          </div>
-        </div>
-
-        <div className="hero-org__bottom flex-module">
-          <div className="inner inner--slim-1172 cleared">
-            <div className={`hero-org__left wow${heroVis}`}>
-              <div className={`sub-heading fadeInUpS wow${heroVis}`}>Real Results</div>
-              <div className={`content-entry fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-                <p>
-                  Every job below was done by a Pipe Monkeys tech in Brooklyn, Queens, or Nassau
-                  County. These are real lines, real homes, and real results — no stock photos.
-                  {/* [TODO: Replace placeholder images with actual job photos from client] */}
-                </p>
-              </div>
-            </div>
-
-            <div className="hero-org__right">
-              <div className={`sub-heading fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-                Quick Links
-              </div>
-              <ul className="quick-links" role="list">
-                <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.1s" }}>
-                  <a className="ia-link ia-link--arrow" href="tel:7187491830">
-                    <i className="icon-link" />
-                    <span>Call (718) 749-1830</span>
-                  </a>
-                </li>
-                <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.2s" }}>
-                  <a className="ia-link ia-link--arrow" href="/craft-catalog">
-                    <i className="icon-link" />
-                    <span>Our Services</span>
-                  </a>
-                </li>
-                <li className={`fadeInUpS wow${heroVis}`} style={{ animationDelay: "0.3s" }}>
-                  <a className="ia-link ia-link--arrow" href="/contact-us">
-                    <i className="icon-link" />
-                    <span>Schedule Service</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── Gallery Grid ── */}
-      <div
-        ref={gridRef}
-        className={`user-grid-small fadeIn wow${gridInView ? " is-visible" : ""} flex-module`}
-      >
+      <div ref={ref} className="content-block-flex flex-module">
         <div className="inner inner--slim-1172">
-          <h2
-            className={`h3 fadeInUpS wow${gridInView ? " is-visible" : ""}`}
-            style={{ animationDelay: "0.1s" }}
-          >
-            Recent Jobs
-          </h2>
-          <div
-            className={`content-entry fadeInUpS wow${gridInView ? " is-visible" : ""}`}
-            style={{ animationDelay: "0.2s" }}
-          >
-            <p>
-              Scroll through clogs we&apos;ve cleared across the area. From grease-packed kitchen
-              lines to root-choked main sewers — we document our work and stand behind every job.
+          <div className={`content-block-head wide fadeInUpS wow${vis}`}>
+            <div className="sub-heading">Job Gallery</div>
+            <h1 className="h2">Plumbing Work Across NYC</h1>
+            <p className="p2">
+              A sample of plumbing jobs completed by A&amp;E NYC Plumbing throughout
+              Manhattan and NYC. From routine repairs to full installations — every
+              job is handled by licensed technicians with upfront pricing.
             </p>
           </div>
+
+          {/* 2-column grid */}
           <div
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(2, 1fr)",
-              gap: "3rem",
+              gap: "2rem",
+              marginTop: "3rem",
             }}
-            className="gallery-grid"
+            className="max-[600px]:grid-cols-1"
           >
             {galleryItems.map((item, i) => (
-              <GalleryCard key={item.id} item={item} delay={`${(i % 2) * 0.1}s`} />
+              <div
+                key={item.label}
+                className={`fadeInUpS wow${vis}`}
+                style={{ animationDelay: `${i * 0.1}s` }}
+              >
+                <div
+                  style={{
+                    aspectRatio: "4/3",
+                    backgroundImage: `url(${item.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundColor: "#101d2b",
+                    borderRadius: "4px",
+                    marginBottom: "1rem",
+                  }}
+                />
+                <p className="p3 ia-medium">{item.label}</p>
+              </div>
             ))}
           </div>
-          <style>{`
-            @media (max-width: 640px) {
-              .gallery-grid { grid-template-columns: 1fr !important; }
-            }
-          `}</style>
-        </div>
-      </div>
 
-      {/* ── CTA ── */}
-      <div
-        ref={ctaRef}
-        className={`front-donation ia-bg-sky flex-module wow fadeInUpS${ctaInView ? " is-visible" : ""}`}
-      >
-        <div className="inner inner--slim-1172">
-          <div className={`sub-heading wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.1s" }}>
-            Ready to Clear Your Drain?
-          </div>
-          <h2 className={`h2 wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
-            Same-Day Service Available
-          </h2>
-          <div className={`front-donation__in wow fadeInUpS${ctaInView ? " is-visible" : ""}`} style={{ animationDelay: "0.2s" }}>
-            <div className="content-entry">
-              <p>
-                Call <strong>(718) 749-1830</strong> — we&apos;ll give you an honest price
-                before we start, and we won&apos;t leave until the job is done right.
-              </p>
-            </div>
-            <div className="front-donation__btn-wrap">
-              <div className="front-donation__btn">
-                <a className="btn btn--primary" href="tel:7187491830">
-                  Call (718) 749-1830
-                </a>
-              </div>
-            </div>
+          <div
+            className={`fadeInUpS wow${vis}`}
+            style={{ animationDelay: "0.4s", marginTop: "4rem", textAlign: "center" }}
+          >
+            <p className="p2" style={{ marginBottom: "2rem" }}>
+              Want to see more of our work? Call us at{" "}
+              <a href="tel:6463927164" className="ia-link">(646) 392-7164</a> — we&apos;re
+              happy to discuss your project and what we&apos;ve done for similar jobs.
+            </p>
           </div>
         </div>
       </div>
-
     </main>
   );
 }

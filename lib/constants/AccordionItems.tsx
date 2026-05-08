@@ -4,58 +4,62 @@ type AccordionStep = { label: string; body: string };
 export const accordionItems = [
   {
     id: "accordion-0",
-    title: "Main Sewer Lines",
+    title: "Drain Repair",
     image: "/images/IMG_9688-1024x682.jpg",
+    // [TODO: Replace with A&E NYC Plumbing drain repair job photo]
     description:
-      "When the main line backs up, every drain in the building stops. We clear main sewer lines in Brooklyn brownstones, Queens multi-family buildings, and Nassau County homes — same day.",
-    learnHref: "/craft-catalog/main-sewer-lines",
+      "From slow kitchen sinks to full sewer line backups — A&E NYC Plumbing clears and repairs drains in Manhattan apartments, multi-unit buildings, and commercial spaces across all NYC boroughs.",
+    learnHref: "/craft-catalog/drain-repair",
     steps: [
-      { label: "Diagnose", body: "We assess the blockage and confirm whether a camera inspection is needed before tools go in." },
-      { label: "Quote Upfront", body: "Price confirmed before any work begins — no surprises, no bait-and-switch." },
-      { label: "Clear It", body: "Industrial cutters and hydro jetting break through root masses, grease plugs, and heavy scale until flow is fully restored." },
-      { label: "Confirm & Clean Up", body: "We run water to verify full flow, show you the result, and leave the work area clean." },
+      { label: "Diagnose", body: "We assess the blockage and confirm the right approach before any tools go in." },
+      { label: "Free Quote", body: "Price confirmed upfront — no hidden fees, no surprises. What we quote is what you pay." },
+      { label: "Clear & Repair", body: "Professional-grade equipment fully clears the blockage and addresses the underlying issue." },
+      { label: "Confirm & Clean Up", body: "We test the drain before leaving and clean up the work area completely." },
     ] as AccordionStep[],
   },
   {
     id: "accordion-1",
-    title: "Kitchen Sink Drains",
+    title: "Leak Detection",
     image: "/images/IMG_9750-1024x683.jpg",
+    // [TODO: Replace with A&E NYC Plumbing leak detection photo]
     description:
-      "Grease, food debris, and soap scum build up faster in NYC kitchens than anywhere else. We clear kitchen drains across Brooklyn, Queens, and Nassau County with pro snakes and hydro jetting.",
-    learnHref: "/craft-catalog/kitchen-sinks",
+      "Hidden leaks cause serious structural damage before you know they exist. Our licensed technicians locate leaks accurately in walls, floors, and ceilings — so we can fix the right spot without unnecessary demolition.",
+    learnHref: "/craft-catalog/leak-detection",
     steps: [
-      { label: "Diagnose", body: "We assess the drain and confirm whether snaking or hydro jetting is the right call for your situation." },
-      { label: "Quote Upfront", body: "Price confirmed before we touch anything — what we quote is what you pay." },
-      { label: "Clear It", body: "Hydro jetting scrubs grease from pipe walls for recurring clogs; a professional snake handles straightforward blockages fast." },
-      { label: "Test & Clean Up", body: "Hot water confirms full drainage. We wipe down the work area before leaving." },
+      { label: "Assess", body: "We evaluate visible signs and use professional methods to pinpoint the leak source." },
+      { label: "Free Quote", body: "Clear repair price before any work begins." },
+      { label: "Repair", body: "We fix the source using quality materials that hold up long term." },
+      { label: "Verify & Clean Up", body: "We confirm the leak is fully resolved before leaving." },
     ] as AccordionStep[],
   },
   {
     id: "accordion-2",
-    title: "Hydro Jetting",
+    title: "Water Heater Installation",
     image: "/images/iStock-530983109-1.jpg",
+    // [TODO: Replace with A&E NYC Plumbing water heater photo]
     description:
-      "A snake clears a path. Hydro jetting scrubs the pipe walls clean. If the same drain has backed up more than once this year, jetting is the long-term fix.",
-    learnHref: "/craft-catalog/hydro-jetting",
+      "Is your hot water unreliable or your energy bills climbing? A&E NYC Plumbing repairs and installs tank and tankless water heaters throughout Manhattan and NYC — with safe, code-compliant installation.",
+    learnHref: "/craft-catalog/water-heater-installation",
     steps: [
-      { label: "Camera First", body: "We confirm the pipe is structurally sound before introducing high pressure — jetting a cracked pipe makes it worse." },
-      { label: "Quote Upfront", body: "Price confirmed before we start." },
-      { label: "Jet It", body: "The hose feeds through the clean-out at up to 4,000 PSI, scrubbing pipe walls clean in both directions until flow is fully restored." },
-      { label: "Confirm", body: "We run water to verify full flow. On main line jobs, we can run a post-jet camera to show you the before-and-after." },
+      { label: "Assess", body: "We evaluate your unit and recommend repair or replacement based on age, condition, and your needs." },
+      { label: "Free Quote", body: "Full price — parts and labor — before we begin." },
+      { label: "Install or Repair", body: "Safe installation with proper gas or electrical connections and pressure relief valve." },
+      { label: "Test & Clean Up", body: "We confirm hot water is flowing before leaving." },
     ] as AccordionStep[],
   },
   {
     id: "accordion-3",
-    title: "Camera Inspection",
+    title: "Gas Line Services",
     image: "/images/IMG_9688-1024x682.jpg",
+    // [TODO: Replace with A&E NYC Plumbing gas line photo]
     description:
-      "Before recommending a major repair or repeated service, we run a camera through the line and show you exactly what's there — in real time. No guesswork. No upsells on work you don't need.",
-    learnHref: "/craft-catalog/camera-inspection",
+      "Gas line maintenance, repair, and installation — handled by licensed, insured technicians. Whether you need a new line run for an appliance or an emergency leak response, we prioritize safety and NYC code compliance.",
+    learnHref: "/craft-catalog/gas-line-services",
     steps: [
-      { label: "Access the Line", body: "We locate the clean-out or access point nearest the problem area." },
-      { label: "Quote Upfront", body: "Price confirmed before the camera goes in." },
-      { label: "Run the Camera", body: "High-resolution footage shows root masses, grease, cracks, or offsets in real time — you're watching the screen with us." },
-      { label: "Report & Recommend", body: "We tell you what we found and what needs to be done, with footage to back it up. You decide. No pressure." },
+      { label: "Assessment", body: "We inspect the infrastructure, identify the issue, and confirm NYC code requirements." },
+      { label: "Free Quote", body: "Full price before any work begins." },
+      { label: "Repair or Install", body: "All gas work performed by licensed technicians following NYC safety standards." },
+      { label: "Pressure Test", body: "We pressure-test the line and confirm no leaks before closing the job." },
     ] as AccordionStep[],
   },
 ];

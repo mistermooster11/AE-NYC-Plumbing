@@ -28,7 +28,7 @@ export default function Announcements() {
 
         <div className="front-announcements__inner">
           <div className="sub-heading">How It Works</div>
-          <h3 className="h3">Fast, Clean, and Priced Up Front</h3>
+          <h3 className="h3">Diagnosed, Quoted, and Fixed — Every Time</h3>
         </div>
 
         <div className="relative z-20 front-announcements__content">
@@ -39,7 +39,7 @@ export default function Announcements() {
               <span
                 style={{
                   backgroundImage:
-                    'url(/images/IMG_9688-1024x682.jpg)',
+                    'url(https://www.topplumbernyc.com/wp-content/uploads/2025/06/Licensed-plumber-1024x683.jpg)',
                   backgroundRepeat: 'no-repeat',
                   backgroundPosition: '50% 50%',
                   backgroundSize: 'cover',
@@ -49,7 +49,7 @@ export default function Announcements() {
                   backgroundColor: '#101d2b',
                 }}
               />
-              {/* [TODO: Replace with Pipe Monkeys team or job site photo] */}
+              {/* [TODO: Replace with A&E NYC Plumbing team or job site photo] */}
             </div>
           </div>
 
@@ -57,30 +57,31 @@ export default function Announcements() {
           <div className="front-announcements__text">
             <div className="content-entry">
               <p>
-                Every call starts the same way: we show up, diagnose the problem in front
-                of you, explain exactly what needs to happen, and give you the price before
-                a single tool touches your drain. No guessing, no surprise invoices — just
-                a straight answer and a plan.
+                Every call starts the same way: we arrive, assess the problem in front
+                of you, explain exactly what needs to happen, and give you the price
+                before any work begins. No mystery charges. No pressure to approve extras.
+                Just a straight answer and a plan.
               </p>
               <p>
-                <strong>Step 1: Diagnose.</strong> Our tech assesses the blockage and
-                identifies the right tool for the job — snake, auger, or hydro jet.
+                <strong>Step 1: Diagnose.</strong> Our licensed technician assesses the
+                issue and identifies the right approach — whether it&apos;s a faucet repair,
+                drain clearing, leak fix, or something more involved.
               </p>
               <p>
-                <strong>Step 2: Approve &amp; Clear.</strong> You get the price first.
-                Once you&apos;re ready, we go to work. Most jobs are done in under an hour.
+                <strong>Step 2: Free Quote.</strong> You get the price upfront. We
+                don&apos;t start until you&apos;re ready. What we quote is what you pay.
               </p>
               <p>
-                <strong>Step 3: Confirm &amp; Clean Up.</strong> We test the flow in front
-                of you, clean the work area, and don&apos;t leave until the drain is
-                fully clear.
+                <strong>Step 3: Fix It &amp; Clean Up.</strong> We complete the job with
+                quality materials, test the result in front of you, and leave the work
+                area clean before we leave.
               </p>
             </div>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginTop: '2.5rem' }}>
               <SecondaryButton
-                href="/contact-us"
-                label="Schedule Service"
+                href="tel:6463927164"
+                label="Call for a Free Quote"
                 wow
               />
               <SecondaryButton

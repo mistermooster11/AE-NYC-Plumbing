@@ -4,155 +4,60 @@ export type ServiceNavItem = { href: string; label: string };
 
 export type ServicePageData = {
   title: string;
-  /** Fallback background color while TODO image is pending */
   bgColor: string;
   navItems: ServiceNavItem[];
-  /** Short intro paragraph shown in CraftOverview left column */
   overviewContent: ReactNode;
-  /** Quick links shown in CraftOverview right column */
   overviewQuickLinks: { label: string; href: string }[];
-  /** Middle content sections rendered between overview and related services */
   sections: { id: string; heading: string; content: ReactNode }[];
-  /** "Related Services" links at page bottom */
   relatedServices: { label: string; href: string }[];
 };
 
 export const servicePages: Record<string, ServicePageData> = {
 
-  /* ─── MAIN SEWER LINES ─────────────────────────────────────────────────── */
-  "main-sewer-lines": {
-    title: "Main Sewer Lines",
+  "drain-repair": {
+    title: "Drain Repair",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"          },
-      { href: "#when_you_need_it",  label: "When You Need It"  },
-      { href: "#our_process",       label: "Our Process"       },
-      { href: "#related_services",  label: "Related Services"  },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          When the main sewer line backs up, every drain in the building stops
-          working. These blockages — caused by root intrusion, grease and scale
-          buildup, or decades of accumulation — require industrial-grade equipment
-          that goes beyond what a standard snake can handle.
+          Drain problems are one of the most common plumbing calls in Manhattan
+          and across NYC. Whether it&apos;s a slow kitchen sink, a completely blocked
+          bathroom drain, or a sewer line backup affecting the whole building —
+          A&amp;E NYC Plumbing has the tools and experience to diagnose and fix
+          it fast.
         </p>
         <p>
-          Pipe Monkeys techs clear main sewer lines in Brooklyn brownstones, Queens
-          multi-family buildings, and Nassau County homes with long underground
-          runs — every single day.
+          Our licensed technicians perform sewer line repair and drain clearing
+          for all types of drain issues in residential and commercial buildings
+          throughout New York City.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830"   },
-      { label: "Contact Us Online",   href: "/contact-us"      },
-    ],
-    sections: [
-      {
-        id: "when_you_need_it",
-        heading: "When Do You Need Main Line Service?",
-        content: (
-          <>
-            <p>
-              Multiple drains backing up at once is the clearest sign your main
-              sewer line is blocked — not just a single fixture. Other warning signs
-              include gurgling sounds from drains, slow flow on every floor of the
-              building, sewage odors, or water backing up in the tub when you flush
-              the toilet.
-            </p>
-            <p>
-              These symptoms don&rsquo;t clear on their own. The longer a main line
-              blockage sits, the higher the risk of a sewage backup into the basement
-              or lower-level units. Call us as soon as these signs appear.
-            </p>
-          </>
-        ),
-      },
-      {
-        id: "our_process",
-        heading: "How We Handle It",
-        content: (
-          <>
-            <p>
-              <strong>Step 1 — Diagnose.</strong> We assess the situation before
-              any tools go in. For main line jobs, we confirm the blockage location
-              and severity and recommend a camera inspection when the cause isn&rsquo;t
-              obvious.
-            </p>
-            <p>
-              <strong>Step 2 — Quote Upfront.</strong> You get the price before
-              we start — no surprises. What we quote is what you pay.
-            </p>
-            <p>
-              <strong>Step 3 — Clear It.</strong> We use industrial electric cutters
-              and hydro jetting equipment to break through and flush out root masses,
-              grease plugs, and heavy scale. We don&rsquo;t leave until flow is fully
-              restored.
-            </p>
-            <p>
-              <strong>Step 4 — Confirm and Clean Up.</strong> We run water through
-              to verify full flow, show you the result, and leave the area cleaner
-              than we found it. Shoe covers and drop cloths on every job.
-            </p>
-          </>
-        ),
-      },
-    ],
-    relatedServices: [
-      { label: "Camera Inspection",         href: "/craft-catalog/camera-inspection"    },
-      { label: "Hydro Jetting",             href: "/craft-catalog/hydro-jetting"        },
-      { label: "Drain Snaking & Augering",  href: "/craft-catalog/drain-snaking"        },
-      { label: "Multi-Unit Buildings",      href: "/craft-catalog/multi-unit-buildings" },
-    ],
-  },
-
-  /* ─── KITCHEN SINKS ────────────────────────────────────────────────────── */
-  "kitchen-sinks": {
-    title: "Kitchen Sinks",
-    bgColor: "#101d2b",
-    navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
-    ],
-    overviewContent: (
-      <>
-        <p>
-          Grease, food debris, and soap scum are the three main kitchen drain
-          killers — and in New York City buildings with heavy daily use, they
-          build up faster than anywhere else. A slow kitchen sink almost always
-          means the problem is already significant inside the pipe.
-        </p>
-        <p>
-          Pipe Monkeys clears kitchen drains across Brooklyn, Queens, and Nassau
-          County using professional snakes and hydro jetting, depending on the
-          severity. No mess, no chemical damage to pipes.
-        </p>
-      </>
-    ),
-    overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Kitchen Drain Service?",
+        heading: "When Do You Need Drain Repair?",
         content: (
           <>
             <p>
-              A kitchen drain that drains slowly, backs up under the sink, or
-              emits a persistent odor is telling you grease or debris has
-              accumulated in the line. In buildings with garbage disposals, the
-              buildup accelerates — and chemical drain cleaners can actually make
-              the long-term problem worse by softening older pipes.
+              Slow drains, recurring backups, gurgling sounds from multiple
+              fixtures, or sewage odors are all signs your drainage system
+              needs attention. These issues rarely resolve on their own.
             </p>
             <p>
-              Don&rsquo;t wait until the sink stops draining completely. Early
-              intervention is cheaper, faster, and keeps standing water and odors
-              out of your kitchen.
+              If multiple drains in your home or building are slow or backing
+              up simultaneously, the problem is likely in the main sewer line
+              and requires professional equipment to properly diagnose and clear.
             </p>
           </>
         ),
@@ -162,84 +67,57 @@ export const servicePages: Record<string, ServicePageData> = {
         heading: "How We Handle It",
         content: (
           <>
-            <p>
-              <strong>Step 1 — Diagnose.</strong> We look at the sink, check
-              under the cabinet, and assess how far the blockage has progressed.
-              We&rsquo;ll tell you whether snaking or jetting is the right call
-              and why.
-            </p>
-            <p>
-              <strong>Step 2 — Quote Upfront.</strong> Price is confirmed before
-              any work begins. No bait-and-switch.
-            </p>
-            <p>
-              <strong>Step 3 — Clear It.</strong> For grease buildup, hydro
-              jetting scrubs the pipe walls clean — reducing the chance of a
-              repeat clog. For straightforward blockages, a professional electric
-              snake breaks it up fast and gets the line flowing.
-            </p>
-            <p>
-              <strong>Step 4 — Test and Clean Up.</strong> We run hot water to
-              confirm full drainage and wipe down the work area before we leave.
-            </p>
+            <p><strong>Step 1 — Diagnose.</strong> We assess the drain issue and identify the right approach.</p>
+            <p><strong>Step 2 — Free Quote.</strong> We give you a clear price before any work begins. No hidden fees.</p>
+            <p><strong>Step 3 — Clear &amp; Repair.</strong> Our technicians use professional-grade equipment to fully clear the blockage.</p>
+            <p><strong>Step 4 — Confirm &amp; Clean Up.</strong> We test the drain before leaving and clean up the work area completely.</p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Hydro Jetting",            href: "/craft-catalog/hydro-jetting"       },
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"       },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines"    },
-      { label: "Multi-Unit Buildings",     href: "/craft-catalog/multi-unit-buildings"},
+      { label: "Leak Detection",       href: "/craft-catalog/leak-detection"       },
+      { label: "Piping & Re-piping",   href: "/craft-catalog/piping-and-repiping"  },
+      { label: "Water Line Services",  href: "/craft-catalog/water-line-services"  },
+      { label: "Residential Plumbing", href: "/craft-catalog/residential-plumbing" },
     ],
   },
 
-  /* ─── TUBS & SHOWERS ───────────────────────────────────────────────────── */
-  "tubs-and-showers": {
-    title: "Tubs & Showers",
+  "faucets-and-sinks": {
+    title: "Faucets & Sinks",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          Hair, soap residue, and mineral deposits accumulate silently inside tub
-          and shower drains until you&rsquo;re standing in ankle-deep water. The
-          fix is straightforward — but done wrong, it damages tile, p-traps, or
-          the drain body itself.
+          A damaged or malfunctioning faucet can translate into extremely high
+          water bills. A&amp;E NYC Plumbing repairs and installs all types of
+          faucets and sinks for kitchens, bathrooms, and utility areas throughout
+          Manhattan and NYC.
         </p>
         <p>
-          Pipe Monkeys removes bathroom drain blockages cleanly and carefully, with
-          shoe covers and drop cloths on every job. Your bathroom goes back to normal
-          — or better.
+          From a simple washer replacement to a full kitchen faucet installation,
+          we get it done right the first time with licensed technicians and upfront pricing.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Tub & Shower Drain Service?",
+        heading: "When Do You Need Faucet or Sink Service?",
         content: (
           <>
-            <p>
-              Standing water in the tub, a drain that takes minutes to clear after
-              a shower, or a persistent musty smell from the drain are all signs of a
-              buildup that a plunger won&rsquo;t fix. In older NYC buildings, mineral
-              deposits from hard water compound the problem — narrowing pipes gradually
-              until they nearly close off.
-            </p>
-            <p>
-              If you&rsquo;ve already tried drain cleaning solutions without results,
-              the clog is past the point of DIY. Call us.
-            </p>
+            <p>Dripping faucets, low water pressure at a specific fixture, a faucet handle that won&apos;t shut off, or a sink that drains slowly are all reasons to call.</p>
+            <p>Ignoring a dripping faucet can waste thousands of gallons of water per year and significantly inflate your water bill. A fast repair pays for itself quickly.</p>
           </>
         ),
       },
@@ -248,82 +126,56 @@ export const servicePages: Record<string, ServicePageData> = {
         heading: "How We Handle It",
         content: (
           <>
-            <p>
-              <strong>Step 1 — Diagnose.</strong> We assess the drain type, check the
-              p-trap and trap arm for accessibility, and confirm the blockage is in
-              the drain line — not the main stack.
-            </p>
-            <p>
-              <strong>Step 2 — Quote Upfront.</strong> Price confirmed before we
-              touch anything. You approve — then we work.
-            </p>
-            <p>
-              <strong>Step 3 — Clear It.</strong> We use the right cable gauge for
-              the pipe size — no forcing, no guessing. The blockage comes out cleanly
-              without damaging the drain body or tile surround.
-            </p>
-            <p>
-              <strong>Step 4 — Test and Clean Up.</strong> We run the shower and
-              confirm full drainage before leaving. Shoe covers and drop cloths mean
-              your bathroom floor stays clean throughout.
-            </p>
+            <p><strong>Step 1 — Diagnose.</strong> We assess the faucet or sink and confirm what&apos;s needed — repair or replacement.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Price confirmed before any work starts.</p>
+            <p><strong>Step 3 — Repair or Install.</strong> We handle the full job including testing for leaks.</p>
+            <p><strong>Step 4 — Clean Up.</strong> We leave your sink in better shape than we found it.</p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"    },
-      { label: "Toilets",                  href: "/craft-catalog/toilets"           },
-      { label: "Hydro Jetting",            href: "/craft-catalog/hydro-jetting"     },
-      { label: "Kitchen Sinks",            href: "/craft-catalog/kitchen-sinks"     },
+      { label: "Kitchen & Bath Plumbing", href: "/craft-catalog/kitchen-and-bath-plumbing" },
+      { label: "Plumbing Fixtures",       href: "/craft-catalog/plumbing-fixtures"         },
+      { label: "Drain Repair",            href: "/craft-catalog/drain-repair"              },
+      { label: "Leak Detection",          href: "/craft-catalog/leak-detection"            },
     ],
   },
 
-  /* ─── TOILETS ──────────────────────────────────────────────────────────── */
-  "toilets": {
-    title: "Toilets",
+  "leak-detection": {
+    title: "Leak Detection",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          Stubborn toilet clogs — including foreign objects, excessive paper, and
-          blockages too deep for a plunger to reach — require the right auger and
-          the right technique. Forcing the wrong tool causes damage; calling too
-          late turns a simple clog into a sewage backup.
+          A water leak you can&apos;t see can cause serious structural damage and
+          sky-high utility bills before you even know it exists. A&amp;E NYC Plumbing
+          provides professional leak detection throughout Manhattan and NYC.
         </p>
         <p>
-          Pipe Monkeys handles toilet clogs fast, without splash, and without damage
-          to the toilet body or floor. We test the flush before leaving.
+          Detecting the leak is the first and most essential step to fixing it.
+          Our licensed technicians identify hidden leaks in pipes, walls, and under floors.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Toilet Clog Service?",
+        heading: "Signs You Have a Hidden Leak",
         content: (
           <>
-            <p>
-              If a plunger hasn&rsquo;t resolved the clog after a few attempts, the
-              blockage is past the trap — deeper in the drain line or in an object
-              that can&rsquo;t be pushed through. Common culprits include: children&rsquo;s
-              toys, hygiene products, excessive wipes (even &ldquo;flushable&rdquo; ones),
-              and buildup at the horn of older toilets.
-            </p>
-            <p>
-              A partial clog that flushes slowly is also worth addressing before it
-              becomes a full backup. Call us before the situation escalates.
-            </p>
+            <p>Unexplained increases in your water bill, water stains on walls or ceilings, the sound of running water when nothing is on, or mold in unexpected areas are signs of a hidden leak.</p>
+            <p>In NYC apartment buildings, a leak in one unit can damage multiple floors below. Early detection protects your space and limits your liability.</p>
           </>
         ),
       },
@@ -332,84 +184,56 @@ export const servicePages: Record<string, ServicePageData> = {
         heading: "How We Handle It",
         content: (
           <>
-            <p>
-              <strong>Step 1 — Diagnose.</strong> We determine whether the clog is
-              in the toilet trap, the flange connection, or deeper in the drain line.
-              That determines the right tool.
-            </p>
-            <p>
-              <strong>Step 2 — Quote Upfront.</strong> You get a clear price before
-              any work begins.
-            </p>
-            <p>
-              <strong>Step 3 — Clear It.</strong> We use a professional closet auger
-              to retrieve the object or break up the blockage without scratching the
-              bowl or damaging the internal glaze. We&rsquo;ve cleared everything from
-              toys to full pipe obstructions.
-            </p>
-            <p>
-              <strong>Step 4 — Test and Clean Up.</strong> Multiple test flushes
-              confirm the line is clear. We wipe down and leave the bathroom exactly
-              as we found it.
-            </p>
+            <p><strong>Step 1 — Diagnose.</strong> We assess visible signs and use professional methods to pinpoint the source.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Once we know the cause, we give you a clear quote for the repair.</p>
+            <p><strong>Step 3 — Repair.</strong> We make the repair using quality materials that hold up long term.</p>
+            <p><strong>Step 4 — Verify &amp; Clean Up.</strong> We confirm the leak is resolved before leaving.</p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Tubs & Showers",           href: "/craft-catalog/tubs-and-showers" },
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"    },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines" },
-      { label: "Camera Inspection",        href: "/craft-catalog/camera-inspection"},
+      { label: "Drain Repair",          href: "/craft-catalog/drain-repair"         },
+      { label: "Water Line Services",   href: "/craft-catalog/water-line-services"  },
+      { label: "Piping & Re-piping",    href: "/craft-catalog/piping-and-repiping"  },
+      { label: "Water Pressure Repair", href: "/craft-catalog/water-pressure-repair"},
     ],
   },
 
-  /* ─── HYDRO JETTING ────────────────────────────────────────────────────── */
-  "hydro-jetting": {
-    title: "Hydro Jetting",
+  "toilet-repair": {
+    title: "Toilet Repair",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          A snake clears a path through a clog. Hydro jetting actually scrubs the
-          interior pipe walls — using high-pressure water to blast away grease, scale,
-          mineral deposits, and root fragments from the inside out.
+          From a running toilet wasting water to a complete blockage — A&amp;E NYC
+          Plumbing handles all toilet repair and installation throughout Manhattan
+          and New York City.
         </p>
         <p>
-          If the same drain has backed up multiple times in the past year, jetting is
-          the long-term fix. Pipe Monkeys offers hydro jetting for kitchen lines, main
-          sewer lines, and commercial buildings throughout Brooklyn, Queens, and Nassau
-          County.
+          Our service covers everything from internal mechanism repair and pipe
+          maintenance to full toilet replacement when needed.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Is Hydro Jetting the Right Call?",
+        heading: "When Do You Need Toilet Service?",
         content: (
           <>
-            <p>
-              Hydro jetting is the right call when: a drain has recurring clogs despite
-              regular snaking; there is confirmed grease buildup in a restaurant or
-              commercial kitchen line; a camera inspection reveals significant scale or
-              root intrusion that a cutter alone won&rsquo;t fully resolve; or a
-              landlord wants a clean baseline before a new tenant moves in.
-            </p>
-            <p>
-              Jetting is not the right first tool for every job — we&rsquo;ll always
-              recommend it when it&rsquo;s warranted, and only when it&rsquo;s warranted.
-            </p>
+            <p>A constantly running toilet can waste hundreds of gallons per day. Other issues include slow flushing, leaking at the base, unusual sounds, or a toilet that won&apos;t flush.</p>
+            <p>Toilet backups in multi-story buildings can also indicate a blocked sewer line — especially if multiple units are affected.</p>
           </>
         ),
       },
@@ -418,83 +242,55 @@ export const servicePages: Record<string, ServicePageData> = {
         heading: "How We Handle It",
         content: (
           <>
-            <p>
-              <strong>Step 1 — Camera First (Recommended).</strong> For main line
-              jetting, we run a camera to confirm the pipe is structurally sound before
-              introducing high pressure. Jetting a cracked or collapsed pipe makes the
-              problem worse.
-            </p>
-            <p>
-              <strong>Step 2 — Quote Upfront.</strong> Price confirmed before we start.
-            </p>
-            <p>
-              <strong>Step 3 — Jet It.</strong> We feed the jetting hose into the
-              clean-out or access point and work the nozzle through the line at up to
-              4,000 PSI — forward and backward — until the walls are clean and flow
-              is fully restored.
-            </p>
-            <p>
-              <strong>Step 4 — Confirm.</strong> We run water to verify full flow
-              and, on main line jobs, can run a post-jet camera to show you the results.
-            </p>
+            <p><strong>Step 1 — Diagnose.</strong> We identify whether the issue is with the mechanism, wax seal, supply line, or a deeper drain problem.</p>
+            <p><strong>Step 2 — Free Quote.</strong> You get the price upfront before any work begins.</p>
+            <p><strong>Step 3 — Repair or Replace.</strong> We fix or recommend replacement if the toilet is beyond repair.</p>
+            <p><strong>Step 4 — Test &amp; Clean Up.</strong> We test before leaving and clean up completely.</p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Camera Inspection",        href: "/craft-catalog/camera-inspection"   },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines"    },
-      { label: "Kitchen Sinks",            href: "/craft-catalog/kitchen-sinks"       },
-      { label: "Multi-Unit Buildings",     href: "/craft-catalog/multi-unit-buildings"},
+      { label: "Drain Repair",      href: "/craft-catalog/drain-repair"    },
+      { label: "Plumbing Fixtures", href: "/craft-catalog/plumbing-fixtures"},
+      { label: "Leak Detection",    href: "/craft-catalog/leak-detection"   },
+      { label: "Shower & Tub",      href: "/craft-catalog/shower-and-tub"  },
     ],
   },
 
-  /* ─── DRAIN SNAKING & AUGERING ─────────────────────────────────────────── */
-  "drain-snaking": {
-    title: "Drain Snaking & Augering",
+  "shower-and-tub": {
+    title: "Shower & Tub",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          Drain snaking is the first-line tool for most residential clogs. Our
-          professional-grade electric snakes reach further, spin harder, and break
-          through blockages that hand snakes and drugstore augers can&rsquo;t touch.
+          A&amp;E NYC Plumbing handles shower repairs, tub installations, fixture
+          upgrades, and drain clearing for bathrooms throughout Manhattan and NYC.
         </p>
         <p>
-          Pipe Monkeys carries multiple cable sizes — from small bathroom drain cables
-          to full main-line cables — so the right tool is always on the truck when we
-          arrive.
+          Whether you have a slow draining tub, a leaking shower valve, or need
+          a full tub installation — our licensed technicians are ready to help.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Drain Snaking?",
+        heading: "When Do You Need Shower or Tub Service?",
         content: (
           <>
-            <p>
-              Snaking is the right call for most single-drain clogs — kitchen sinks,
-              bathroom sinks, tubs, showers, and toilets where the blockage is localized.
-              It&rsquo;s also the first step for main line jobs before deciding whether
-              hydro jetting is needed.
-            </p>
-            <p>
-              If you&rsquo;ve tried a plunger or a hand snake without results, the
-              clog is past what consumer tools can reach. A professional cable gets
-              into the line, breaks up or retrieves the obstruction, and leaves the
-              drain fully open.
-            </p>
+            <p>A slow-draining tub, a shower that pools water, a valve that drips, inconsistent water temperature, or low showerhead pressure are all reasons to call.</p>
+            <p>Leaking shower valves cause water damage to floors and ceilings in apartments below — in NYC buildings, early attention is critical.</p>
           </>
         ),
       },
@@ -503,83 +299,56 @@ export const servicePages: Record<string, ServicePageData> = {
         heading: "How We Handle It",
         content: (
           <>
-            <p>
-              <strong>Step 1 — Select the Right Tool.</strong> Cable diameter matters.
-              We match the cable to the pipe size — forcing an oversized cable causes
-              damage; undersizing leaves the clog intact.
-            </p>
-            <p>
-              <strong>Step 2 — Quote Upfront.</strong> You know the price before work
-              begins.
-            </p>
-            <p>
-              <strong>Step 3 — Snake It.</strong> We feed the cable through the access
-              point (drain opening, clean-out, or trap access) and work through the
-              blockage until the line clears. If the cable hits something it can&rsquo;t
-              resolve, we&rsquo;ll tell you immediately — no pushing blind.
-            </p>
-            <p>
-              <strong>Step 4 — Test and Clean Up.</strong> Water runs to confirm full
-              drainage. Cable, debris, and equipment cleaned up before we leave.
-            </p>
+            <p><strong>Step 1 — Diagnose.</strong> We identify the issue — drain, valve, supply line, or fixture.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Clear price before any work begins.</p>
+            <p><strong>Step 3 — Repair or Install.</strong> We handle the repair or installation with quality materials.</p>
+            <p><strong>Step 4 — Test &amp; Clean Up.</strong> We run the shower or tub to confirm everything works before leaving.</p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Hydro Jetting",        href: "/craft-catalog/hydro-jetting"     },
-      { label: "Main Sewer Lines",     href: "/craft-catalog/main-sewer-lines"  },
-      { label: "Kitchen Sinks",        href: "/craft-catalog/kitchen-sinks"     },
-      { label: "Tubs & Showers",       href: "/craft-catalog/tubs-and-showers"  },
+      { label: "Toilet Repair",           href: "/craft-catalog/toilet-repair"            },
+      { label: "Faucets & Sinks",         href: "/craft-catalog/faucets-and-sinks"        },
+      { label: "Kitchen & Bath Plumbing", href: "/craft-catalog/kitchen-and-bath-plumbing" },
+      { label: "Leak Detection",          href: "/craft-catalog/leak-detection"            },
     ],
   },
 
-  /* ─── CAMERA INSPECTION ────────────────────────────────────────────────── */
-  "camera-inspection": {
-    title: "Camera Inspection",
+  "water-heater-installation": {
+    title: "Water Heater Installation",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          Before recommending a major repair, jetting service, or repeated snaking,
-          Pipe Monkeys can run a camera through your main line and show you exactly
-          what&rsquo;s in there — in real time. You see what we see: root intrusion,
-          grease buildup, pipe damage, or collapsed sections.
+          A&amp;E NYC Plumbing provides water heater repair and new installation
+          services throughout Manhattan and New York City — including tankless
+          water heater installations.
         </p>
         <p>
-          No guesswork. No upsells on work you don&rsquo;t need.
+          Our licensed technicians handle all water heater brands and types,
+          ensuring safe installation with proper connections and code compliance.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need a Camera Inspection?",
+        heading: "Signs Your Water Heater Needs Service",
         content: (
           <>
-            <p>
-              Camera inspection is the right call when: a main line blockage keeps
-              coming back after repeated snaking; you&rsquo;re buying or selling a
-              home and want to know the condition of the sewer line; a plumber or
-              contractor recommends an expensive repair and you want independent
-              verification; or we recommend hydro jetting and want to confirm the
-              pipe is structurally sound first.
-            </p>
-            <p>
-              It&rsquo;s also useful after a major clearing job — we can show you the
-              before-and-after results so you know the line is actually clean, not
-              just partially cleared.
-            </p>
+            <p>Running out of hot water faster than usual, inconsistent temperature, rumbling sounds from the tank, rusty hot water, or visible corrosion are all signs of a problem.</p>
+            <p>Most tank water heaters last 8–12 years. If yours is in that range and having issues, replacement often makes more financial sense than repair.</p>
           </>
         ),
       },
@@ -588,87 +357,57 @@ export const servicePages: Record<string, ServicePageData> = {
         heading: "How We Handle It",
         content: (
           <>
-            <p>
-              <strong>Step 1 — Access the Line.</strong> We locate the clean-out or
-              access point nearest to the problem area. In buildings without a clean-out,
-              we&rsquo;ll advise on the best access option.
-            </p>
-            <p>
-              <strong>Step 2 — Quote Upfront.</strong> Price confirmed before the
-              camera goes in.
-            </p>
-            <p>
-              <strong>Step 3 — Run the Camera.</strong> We feed a high-resolution
-              camera through the line and walk you through what we see — root masses,
-              grease, cracks, offsets, or clear pipe. You&rsquo;re watching the screen
-              in real time.
-            </p>
-            <p>
-              <strong>Step 4 — Report and Recommend.</strong> We tell you what we found
-              and what, if anything, needs to be done — with the footage to back it up.
-              You decide how to proceed. No pressure.
-            </p>
+            <p><strong>Step 1 — Assess.</strong> We evaluate the unit and recommend repair or replacement based on age, condition, and your needs.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Full price — parts and labor — before we begin.</p>
+            <p><strong>Step 3 — Install or Repair.</strong> Safe installation including gas or electrical connections and pressure relief valves.</p>
+            <p><strong>Step 4 — Test &amp; Clean Up.</strong> We confirm hot water is flowing before leaving.</p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Hydro Jetting",            href: "/craft-catalog/hydro-jetting"       },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines"    },
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"       },
-      { label: "Multi-Unit Buildings",     href: "/craft-catalog/multi-unit-buildings"},
+      { label: "Gas Line Services",    href: "/craft-catalog/gas-line-services"         },
+      { label: "Piping & Re-piping",   href: "/craft-catalog/piping-and-repiping"       },
+      { label: "Plumbing Fixtures",    href: "/craft-catalog/plumbing-fixtures"         },
+      { label: "Residential Plumbing", href: "/craft-catalog/residential-plumbing"      },
     ],
   },
 
-  /* ─── MULTI-UNIT & COMMERCIAL BUILDINGS ────────────────────────────────── */
-  "multi-unit-buildings": {
-    title: "Multi-Unit & Commercial Buildings",
+  "gas-line-services": {
+    title: "Gas Line Installation & Repair",
     bgColor: "#101d2b",
     navItems: [
-      { href: "#overview",          label: "Overview"         },
-      { href: "#when_you_need_it",  label: "When You Need It" },
-      { href: "#our_process",       label: "Our Process"      },
-      { href: "#related_services",  label: "Related Services" },
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
     ],
     overviewContent: (
       <>
         <p>
-          Pipe Monkeys works with brownstones, pre-war walk-ups, condos, co-ops,
-          and multi-family buildings across Brooklyn and Queens every day. Stack
-          drain issues, shared main lines, and building-wide backups are all in
-          our wheelhouse — and we know how to coordinate the job without creating
-          chaos for tenants.
+          Your home&apos;s gas infrastructure must be maintained safely at all times.
+          A&amp;E NYC Plumbing provides gas line maintenance, repair, and installation
+          throughout Manhattan and NYC — handled by licensed, insured technicians.
         </p>
         <p>
-          Building managers and landlords: we show up on time, work efficiently,
-          and document the work. Call us directly at{" "}
-          <a href="tel:7187491830">(718) 749-1830</a>.
+          Whether you need a new gas line run for an appliance, a repair to an
+          existing line, or emergency leak response — we have the expertise and
+          licensing to do it right.
         </p>
       </>
     ),
     overviewQuickLinks: [
-      { label: "Call (718) 749-1830", href: "tel:7187491830" },
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
       { label: "Contact Us Online",   href: "/contact-us"    },
     ],
     sections: [
       {
         id: "when_you_need_it",
-        heading: "When Do You Need Multi-Unit Drain Service?",
+        heading: "When Do You Need Gas Line Service?",
         content: (
           <>
-            <p>
-              A building-wide backup — multiple units complaining of slow drains or
-              sewage odors simultaneously — almost always points to the main building
-              drain or the stack serving multiple floors. Individual unit clogs are
-              more straightforward; building-wide problems require more diagnostic
-              work to pinpoint whether the issue is in a branch line, the main stack,
-              or the building sewer itself.
-            </p>
-            <p>
-              We handle both. Whether it&rsquo;s a single-apartment drain or a main
-              line serving a six-unit brownstone, we bring the right equipment and
-              take the time to find the actual source of the problem.
-            </p>
+            <p>If you smell gas, hear hissing near a gas appliance, or notice appliances underperforming — call immediately. Gas leaks are emergencies.</p>
+            <p>You also need gas line service when adding new gas appliances, upgrading existing lines, or when an NYC inspection requires work to bring your system up to code.</p>
           </>
         ),
       },
@@ -677,36 +416,541 @@ export const servicePages: Record<string, ServicePageData> = {
         heading: "How We Handle It",
         content: (
           <>
-            <p>
-              <strong>Step 1 — Coordinate with Management.</strong> We work directly
-              with the building manager or owner to understand which units are affected
-              and minimize disruption. If access to multiple units is needed, we schedule
-              efficiently.
-            </p>
-            <p>
-              <strong>Step 2 — Diagnose the Root Cause.</strong> Building-wide symptoms
-              need root-cause diagnosis — we don&rsquo;t just snake the nearest drain.
-              Camera inspection is often recommended to locate the exact blockage in
-              the stack or main building drain.
-            </p>
-            <p>
-              <strong>Step 3 — Quote Upfront.</strong> Clear price before we start.
-              For complex jobs, we scope the work and confirm before proceeding.
-            </p>
-            <p>
-              <strong>Step 4 — Clear and Confirm.</strong> We use the right tool for
-              the blockage type — snake, industrial cutter, or hydro jet — confirm full
-              flow on all affected units, and document the work completed.
-            </p>
+            <p><strong>Step 1 — Assessment.</strong> We inspect the infrastructure, identify the issue, and confirm NYC code requirements.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Full price before any work begins.</p>
+            <p><strong>Step 3 — Repair or Install.</strong> All gas work performed by licensed technicians following NYC safety standards.</p>
+            <p><strong>Step 4 — Test &amp; Verify.</strong> We pressure-test the line and confirm no leaks before closing out.</p>
           </>
         ),
       },
     ],
     relatedServices: [
-      { label: "Camera Inspection",        href: "/craft-catalog/camera-inspection" },
-      { label: "Hydro Jetting",            href: "/craft-catalog/hydro-jetting"     },
-      { label: "Main Sewer Lines",         href: "/craft-catalog/main-sewer-lines"  },
-      { label: "Drain Snaking & Augering", href: "/craft-catalog/drain-snaking"     },
+      { label: "Water Heater Installation", href: "/craft-catalog/water-heater-installation" },
+      { label: "Piping & Re-piping",        href: "/craft-catalog/piping-and-repiping"       },
+      { label: "Residential Plumbing",      href: "/craft-catalog/residential-plumbing"      },
+      { label: "Plumbing Fixtures",         href: "/craft-catalog/plumbing-fixtures"         },
     ],
   },
+
+  "piping-and-repiping": {
+    title: "Piping & Re-piping",
+    bgColor: "#101d2b",
+    navItems: [
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
+    ],
+    overviewContent: (
+      <>
+        <p>
+          A&amp;E NYC Plumbing handles full repiping projects for aging buildings,
+          targeted pipe repairs, and new pipe installation for additions and
+          renovations throughout Manhattan and NYC.
+        </p>
+        <p>
+          Whether you need improvements, maintenance work, or just new pipes —
+          our licensed team is the right crew for the job.
+        </p>
+      </>
+    ),
+    overviewQuickLinks: [
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
+    ],
+    sections: [
+      {
+        id: "when_you_need_it",
+        heading: "When Do You Need Repiping?",
+        content: (
+          <>
+            <p>Older NYC buildings often have galvanized steel or lead pipes that corrode over time. Signs include rusty water, frequent leaks in multiple locations, low building-wide pressure, or a history of repeated pipe failures.</p>
+            <p>Repiping with modern copper or PEX pipe eliminates recurring repair costs and ensures long-term reliability.</p>
+          </>
+        ),
+      },
+      {
+        id: "our_process",
+        heading: "How We Handle It",
+        content: (
+          <>
+            <p><strong>Step 1 — Assess.</strong> We evaluate the pipe system and determine whether targeted repair or full repipe is needed.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Detailed quote before work begins.</p>
+            <p><strong>Step 3 — Install.</strong> New pipe installed with quality materials, coordinating access to minimize disruption.</p>
+            <p><strong>Step 4 — Test &amp; Clean Up.</strong> Pressure testing confirms all connections. Work area cleaned completely.</p>
+          </>
+        ),
+      },
+    ],
+    relatedServices: [
+      { label: "Water Line Services",  href: "/craft-catalog/water-line-services"  },
+      { label: "Leak Detection",       href: "/craft-catalog/leak-detection"       },
+      { label: "Gas Line Services",    href: "/craft-catalog/gas-line-services"    },
+      { label: "Residential Plumbing", href: "/craft-catalog/residential-plumbing" },
+    ],
+  },
+
+  "water-line-services": {
+    title: "Water Line Repair & Installation",
+    bgColor: "#101d2b",
+    navItems: [
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
+    ],
+    overviewContent: (
+      <>
+        <p>
+          A&amp;E NYC Plumbing handles water line repair, replacement, and new
+          installation throughout Manhattan and NYC. From a line break to an
+          aging supply line losing pressure — our licensed technicians handle
+          the work from start to finish.
+        </p>
+        <p>
+          Having suitable water line installation work is essential if you want
+          to save on repair costs in the long run.
+        </p>
+      </>
+    ),
+    overviewQuickLinks: [
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
+    ],
+    sections: [
+      {
+        id: "when_you_need_it",
+        heading: "When Do You Need Water Line Service?",
+        content: (
+          <>
+            <p>Unexplained pressure drops, water discoloration, unusually high bills, wet spots in walls, or a complete loss of water to part of your building all point to a water line issue.</p>
+            <p>Water line damage worsens over time — a slow leak becomes a burst. Early intervention saves money and prevents building damage.</p>
+          </>
+        ),
+      },
+      {
+        id: "our_process",
+        heading: "How We Handle It",
+        content: (
+          <>
+            <p><strong>Step 1 — Locate &amp; Assess.</strong> We identify the damaged section accurately before opening walls or floors.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Full price before work begins.</p>
+            <p><strong>Step 3 — Repair or Replace.</strong> Quality materials, proper connections, and shut-off valves installed correctly.</p>
+            <p><strong>Step 4 — Pressure Test &amp; Clean Up.</strong> Full water flow confirmed with zero leaks before closing the job.</p>
+          </>
+        ),
+      },
+    ],
+    relatedServices: [
+      { label: "Leak Detection",        href: "/craft-catalog/leak-detection"        },
+      { label: "Piping & Re-piping",    href: "/craft-catalog/piping-and-repiping"   },
+      { label: "Water Pressure Repair", href: "/craft-catalog/water-pressure-repair" },
+      { label: "Drain Repair",          href: "/craft-catalog/drain-repair"          },
+    ],
+  },
+
+  "water-pressure-repair": {
+    title: "Water Pressure Repair",
+    bgColor: "#101d2b",
+    navItems: [
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
+    ],
+    overviewContent: (
+      <>
+        <p>
+          High water pressure is very likely to lead to water leak problems and
+          possible broken pipes. A&amp;E NYC Plumbing diagnoses and corrects water
+          pressure issues throughout Manhattan and NYC — preventing damage before
+          it happens.
+        </p>
+        <p>
+          Whether your pressure is too high, too low, or inconsistent — our
+          licensed plumbers identify the cause and fix it.
+        </p>
+      </>
+    ),
+    overviewQuickLinks: [
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
+    ],
+    sections: [
+      {
+        id: "when_you_need_it",
+        heading: "When Do You Need Pressure Service?",
+        content: (
+          <>
+            <p>Low pressure at fixtures, pressure that fluctuates significantly, banging pipes (water hammer), or a pressure gauge over 80 PSI are all signs of a problem.</p>
+            <p>In older NYC buildings, pressure regulators often fail over time — and without one working correctly, excess pressure stresses every pipe joint and appliance in the system.</p>
+          </>
+        ),
+      },
+      {
+        id: "our_process",
+        heading: "How We Handle It",
+        content: (
+          <>
+            <p><strong>Step 1 — Diagnose.</strong> We check system pressure, inspect the PRV, and assess the supply line.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Price confirmed before work begins.</p>
+            <p><strong>Step 3 — Correct.</strong> We calibrate or replace the pressure regulator or address whatever is causing the issue.</p>
+            <p><strong>Step 4 — Verify.</strong> We recheck pressure at multiple points to confirm the system is within the correct range.</p>
+          </>
+        ),
+      },
+    ],
+    relatedServices: [
+      { label: "Water Line Services", href: "/craft-catalog/water-line-services" },
+      { label: "Leak Detection",      href: "/craft-catalog/leak-detection"      },
+      { label: "Piping & Re-piping",  href: "/craft-catalog/piping-and-repiping" },
+      { label: "Drain Repair",        href: "/craft-catalog/drain-repair"        },
+    ],
+  },
+
+  "water-filtration": {
+    title: "Water Filter & Purification",
+    bgColor: "#101d2b",
+    navItems: [
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
+    ],
+    overviewContent: (
+      <>
+        <p>
+          A&amp;E NYC Plumbing installs, repairs, and services all types of water
+          filtration and purification systems throughout Manhattan and NYC —
+          restoring your access to clean water effectively.
+        </p>
+        <p>
+          We handle everything from simple under-sink units to whole-building
+          filtration solutions for residential and commercial properties.
+        </p>
+      </>
+    ),
+    overviewQuickLinks: [
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
+    ],
+    sections: [
+      {
+        id: "when_you_need_it",
+        heading: "When Do You Need Filtration Service?",
+        content: (
+          <>
+            <p>If your filtered water tastes or smells off, your system is overdue for service, your under-sink filter is leaking, or you want to add a whole-home filtration system — we handle all of it.</p>
+            <p>Many NYC residents prefer an additional layer of filtration for taste and peace of mind. We install and service the full range of systems.</p>
+          </>
+        ),
+      },
+      {
+        id: "our_process",
+        heading: "How We Handle It",
+        content: (
+          <>
+            <p><strong>Step 1 — Assess.</strong> We evaluate your current system or help select the right solution for your needs.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Full price before work begins.</p>
+            <p><strong>Step 3 — Install or Service.</strong> Proper plumbing connections with no leaks.</p>
+            <p><strong>Step 4 — Test.</strong> We run water through the system and confirm it&apos;s operating correctly.</p>
+          </>
+        ),
+      },
+    ],
+    relatedServices: [
+      { label: "Water Line Services",   href: "/craft-catalog/water-line-services"  },
+      { label: "Water Pressure Repair", href: "/craft-catalog/water-pressure-repair"},
+      { label: "Plumbing Fixtures",     href: "/craft-catalog/plumbing-fixtures"    },
+      { label: "Residential Plumbing",  href: "/craft-catalog/residential-plumbing" },
+    ],
+  },
+
+  "kitchen-and-bath-plumbing": {
+    title: "Kitchen & Bath Plumbing",
+    bgColor: "#101d2b",
+    navItems: [
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
+    ],
+    overviewContent: (
+      <>
+        <p>
+          Your kitchen and bathroom are the most plumbing-intensive spaces in your
+          home. A&amp;E NYC Plumbing handles all kitchen and bath plumbing work
+          throughout Manhattan and NYC — from routine repairs to full renovation-
+          ready installations.
+        </p>
+        <p>
+          Our licensed technicians install everything correctly with quality
+          materials and no leaks, whether you need a single fixture repaired or
+          multiple elements upgraded.
+        </p>
+      </>
+    ),
+    overviewQuickLinks: [
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
+    ],
+    sections: [
+      {
+        id: "when_you_need_it",
+        heading: "When Do You Need Kitchen or Bath Plumbing?",
+        content: (
+          <>
+            <p>Leaking under the kitchen sink, low pressure at faucets, a slow tub drain, a dishwasher connection issue, or any plumbing tied to a kitchen or bath renovation are all reasons to call.</p>
+            <p>We work alongside renovation contractors or independently — handling the full plumbing scope so you don&apos;t have to coordinate multiple subcontractors.</p>
+          </>
+        ),
+      },
+      {
+        id: "our_process",
+        heading: "How We Handle It",
+        content: (
+          <>
+            <p><strong>Step 1 — Scope the Work.</strong> We assess what&apos;s needed — repair, upgrade, or full installation.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Clear price before work begins.</p>
+            <p><strong>Step 3 — Install or Repair.</strong> All connections — supply lines, drain lines, fixtures, and valves — installed correctly.</p>
+            <p><strong>Step 4 — Test &amp; Clean Up.</strong> We run everything and confirm zero leaks before leaving.</p>
+          </>
+        ),
+      },
+    ],
+    relatedServices: [
+      { label: "Faucets & Sinks",   href: "/craft-catalog/faucets-and-sinks"         },
+      { label: "Shower & Tub",      href: "/craft-catalog/shower-and-tub"            },
+      { label: "Garbage Disposal",  href: "/craft-catalog/garbage-disposal"          },
+      { label: "Plumbing Fixtures", href: "/craft-catalog/plumbing-fixtures"         },
+    ],
+  },
+
+  "garbage-disposal": {
+    title: "Garbage Disposal",
+    bgColor: "#101d2b",
+    navItems: [
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
+    ],
+    overviewContent: (
+      <>
+        <p>
+          A&amp;E NYC Plumbing handles garbage disposal repair and installation
+          throughout Manhattan and NYC. Whether your disposal has stopped working,
+          is leaking, or needs replacement — our licensed plumbers take care of
+          it quickly and correctly.
+        </p>
+      </>
+    ),
+    overviewQuickLinks: [
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
+    ],
+    sections: [
+      {
+        id: "when_you_need_it",
+        heading: "When Do You Need Disposal Service?",
+        content: (
+          <>
+            <p>A disposal that hums but doesn&apos;t grind, leaks from the bottom, trips its reset repeatedly, or has completely stopped responding — all signs you need service.</p>
+            <p>Garbage disposals also cause drain blockages when food passes through without being fully ground — if your kitchen sink is slow after running the disposal, the issues may be related.</p>
+          </>
+        ),
+      },
+      {
+        id: "our_process",
+        heading: "How We Handle It",
+        content: (
+          <>
+            <p><strong>Step 1 — Diagnose.</strong> We assess whether the unit can be repaired or needs replacement.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Full price before any work begins.</p>
+            <p><strong>Step 3 — Repair or Replace.</strong> We handle the full job including removing the old unit and ensuring proper drain connections.</p>
+            <p><strong>Step 4 — Test &amp; Clean Up.</strong> We run the disposal and check for leaks before leaving.</p>
+          </>
+        ),
+      },
+    ],
+    relatedServices: [
+      { label: "Kitchen & Bath Plumbing", href: "/craft-catalog/kitchen-and-bath-plumbing" },
+      { label: "Drain Repair",            href: "/craft-catalog/drain-repair"              },
+      { label: "Faucets & Sinks",         href: "/craft-catalog/faucets-and-sinks"         },
+      { label: "Dishwasher Repair",       href: "/craft-catalog/dishwasher-repair"         },
+    ],
+  },
+
+  "dishwasher-repair": {
+    title: "Dishwasher Repair",
+    bgColor: "#101d2b",
+    navItems: [
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
+    ],
+    overviewContent: (
+      <>
+        <p>
+          Your dishwasher may be affected by a wide range of plumbing situations
+          that only experienced technicians can effectively resolve. A&amp;E NYC
+          Plumbing provides dishwasher repair services in the Manhattan area.
+        </p>
+        <p>
+          From water supply connections and drain line issues to leaking door
+          seals and water inlet valve failures — our licensed plumbers fix it.
+        </p>
+      </>
+    ),
+    overviewQuickLinks: [
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
+    ],
+    sections: [
+      {
+        id: "when_you_need_it",
+        heading: "When Do You Need Dishwasher Service?",
+        content: (
+          <>
+            <p>Water pooling under the dishwasher, dishes coming out dirty, the unit not filling with water, or water not draining after a cycle are the most common plumbing-related dishwasher issues.</p>
+            <p>Many dishwasher problems stem from the drain line connection to the kitchen sink — a clogged drain or improper connection causes backup into the dishwasher basin.</p>
+          </>
+        ),
+      },
+      {
+        id: "our_process",
+        heading: "How We Handle It",
+        content: (
+          <>
+            <p><strong>Step 1 — Diagnose.</strong> We assess the dishwasher&apos;s plumbing connections to identify the issue.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Price confirmed before work begins.</p>
+            <p><strong>Step 3 — Repair.</strong> We correct the plumbing issue — drain connection, supply line, or inlet valve.</p>
+            <p><strong>Step 4 — Test &amp; Clean Up.</strong> We run a cycle to confirm the repair before leaving.</p>
+          </>
+        ),
+      },
+    ],
+    relatedServices: [
+      { label: "Kitchen & Bath Plumbing", href: "/craft-catalog/kitchen-and-bath-plumbing" },
+      { label: "Garbage Disposal",        href: "/craft-catalog/garbage-disposal"          },
+      { label: "Drain Repair",            href: "/craft-catalog/drain-repair"              },
+      { label: "Faucets & Sinks",         href: "/craft-catalog/faucets-and-sinks"         },
+    ],
+  },
+
+  "plumbing-fixtures": {
+    title: "Plumbing Fixtures",
+    bgColor: "#101d2b",
+    navItems: [
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
+    ],
+    overviewContent: (
+      <>
+        <p>
+          A&amp;E NYC Plumbing has a proven history of providing plumbing fixture
+          work of all types throughout Manhattan and NYC. We repair water pipes,
+          handle drain cleaning, and perform a full range of work that leaves
+          your plumbing fixtures in the best and most functional condition.
+        </p>
+      </>
+    ),
+    overviewQuickLinks: [
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
+    ],
+    sections: [
+      {
+        id: "when_you_need_it",
+        heading: "When Do You Need Fixture Service?",
+        content: (
+          <>
+            <p>Dripping faucets, leaking supply valves, worn shutoff valves, fixture upgrades during renovation, or any situation where a plumbing fitting or fixture needs professional installation or repair.</p>
+            <p>Properly installed fixtures last for decades. Improperly installed ones leak slowly — causing hidden water damage far more expensive than the original installation.</p>
+          </>
+        ),
+      },
+      {
+        id: "our_process",
+        heading: "How We Handle It",
+        content: (
+          <>
+            <p><strong>Step 1 — Assess.</strong> We identify what&apos;s needed — repair, replacement, or new installation.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Clear price before work begins.</p>
+            <p><strong>Step 3 — Install or Repair.</strong> Proper connections and leak-free installation guaranteed.</p>
+            <p><strong>Step 4 — Test &amp; Clean Up.</strong> We verify the fixture works correctly and leave the area clean.</p>
+          </>
+        ),
+      },
+    ],
+    relatedServices: [
+      { label: "Faucets & Sinks",         href: "/craft-catalog/faucets-and-sinks"         },
+      { label: "Kitchen & Bath Plumbing", href: "/craft-catalog/kitchen-and-bath-plumbing" },
+      { label: "Piping & Re-piping",      href: "/craft-catalog/piping-and-repiping"       },
+      { label: "Residential Plumbing",    href: "/craft-catalog/residential-plumbing"      },
+    ],
+  },
+
+  "residential-plumbing": {
+    title: "Residential Plumbing",
+    bgColor: "#101d2b",
+    navItems: [
+      { href: "#overview",         label: "Overview"         },
+      { href: "#when_you_need_it", label: "When You Need It" },
+      { href: "#our_process",      label: "Our Process"      },
+      { href: "#related_services", label: "Related Services" },
+    ],
+    overviewContent: (
+      <>
+        <p>
+          A&amp;E NYC Plumbing provides the best residential plumbing services in
+          Manhattan and surrounding NYC boroughs. From clogged drain cleaning and
+          faucet repair to frozen pipe fixes, leak repairs, and full plumbing
+          installation — we handle it all.
+        </p>
+        <p>
+          Licensed, insured, and available Monday through Sunday, 9am–9pm.
+          Whatever the job, we show up prepared and get it done right.
+        </p>
+      </>
+    ),
+    overviewQuickLinks: [
+      { label: "Call (646) 392-7164", href: "tel:6463927164" },
+      { label: "Contact Us Online",   href: "/contact-us"    },
+    ],
+    sections: [
+      {
+        id: "when_you_need_it",
+        heading: "When Do You Need Residential Plumbing?",
+        content: (
+          <>
+            <p>Any plumbing issue in your home — a clogged drain, leaking pipe, broken fixture, low water pressure, running toilet, or failed water heater — is a job for a licensed residential plumber.</p>
+            <p>A&amp;E NYC Plumbing covers the full range: routine maintenance, emergency repairs, fixture installation, and major system work — Mon–Sun, 9am–9pm.</p>
+          </>
+        ),
+      },
+      {
+        id: "our_process",
+        heading: "How We Handle It",
+        content: (
+          <>
+            <p><strong>Step 1 — Diagnose.</strong> We assess the issue fully and explain what needs to be done before picking up a tool.</p>
+            <p><strong>Step 2 — Free Quote.</strong> Parts and labor price before we start.</p>
+            <p><strong>Step 3 — Fix It Right.</strong> Licensed technicians with quality materials and proper installation.</p>
+            <p><strong>Step 4 — Test &amp; Clean Up.</strong> We confirm the repair is complete and leave your home clean.</p>
+          </>
+        ),
+      },
+    ],
+    relatedServices: [
+      { label: "Drain Repair",              href: "/craft-catalog/drain-repair"              },
+      { label: "Leak Detection",            href: "/craft-catalog/leak-detection"            },
+      { label: "Water Heater Installation", href: "/craft-catalog/water-heater-installation" },
+      { label: "Piping & Re-piping",        href: "/craft-catalog/piping-and-repiping"       },
+    ],
+  },
+
 };

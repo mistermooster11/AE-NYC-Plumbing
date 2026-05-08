@@ -27,7 +27,7 @@ export default function Hero() {
               visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full',
             ].join(' ')}
           >
-            Brooklyn, Queens &amp; Nassau County Drain Clearing
+            Manhattan&apos;s Licensed Plumbers — Trusted Across All NYC Boroughs
           </h1>
 
           <div className="flex justify-start pb-20 max-[767px]:block max-[767px]:pb-8">
@@ -41,15 +41,15 @@ export default function Hero() {
               ].join(' ')}
             >
               <p className="text-[1.9rem] leading-[1.6]">
-                From sinks to main lines, we clear tough clogs across Brooklyn,
-                Queens and Nassau County with pro gear and zero stress.
-                Upfront pricing. Family owned. Local NYC techs.
+                From faucet repairs and drain clearing to gas lines and full repiping —
+                A&amp;E NYC Plumbing delivers licensed, insured service with upfront pricing.
+                Available Mon–Sun, 9am–9pm.
               </p>
             </div>
 
             <PrimaryButton
-              label="Call (718) 749-1830"
-              href="tel:7187491830"
+              label="Call (646) 392-7164"
+              href="tel:6463927164"
               dark
               wow
               visible={visible}
@@ -108,20 +108,13 @@ export default function Hero() {
                   visible ? 'h-full scale-100' : 'h-0 scale-[1.2]',
                 ].join(' ')}
               >
-                {/* TODO: Replace src with a Pipe Monkeys hero image or video */}
-                <video
-                  loop
-                  autoPlay
-                  muted
-                  playsInline
-                  preload="none"
+                {/* [TODO: Replace with A&E NYC Plumbing hero image or video] */}
+                <img
+                  src="https://www.topplumbernyc.com/wp-content/uploads/2025/06/Licensed-plumber-1024x683.jpg"
+                  alt="A&E NYC Plumbing — Licensed plumber in Manhattan"
                   className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto max-w-[200%]"
-                >
-                  <source
-                    src="https://www.nccer.org/media/2023/03/Hero-Website-Video-3.mp4"
-                    type="video/mp4"
-                  />
-                </video>
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
             </div>
 
