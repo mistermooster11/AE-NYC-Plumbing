@@ -7,6 +7,9 @@ export type CraftItem = {
   hasTranslation:  boolean;
 };
 
+export const CATEGORIES = ["Plumbing", "Gas & Heating"] as const;
+export const DISCIPLINES = ["Residential", "Commercial"] as const;
+
 export const crafts: CraftItem[] = [
   {
     slug: "drain-repair",
