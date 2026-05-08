@@ -11,7 +11,7 @@ const quickLinks = [
   { label: "Contact Us",                 href: "/contact-us",      external: false },
 ];
 
-const socials = [
+const socials: { icon: string; href: string; label: string }[] = [
   // [TODO: Add A&E NYC Plumbing Facebook URL]
   // { icon: "icon-facebook", href: "https://www.facebook.com/aenycplumbing", label: "Facebook" },
   // [TODO: Add A&E NYC Plumbing Instagram URL if available]
