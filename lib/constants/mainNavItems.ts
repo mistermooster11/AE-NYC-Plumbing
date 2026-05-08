@@ -14,9 +14,8 @@ export type MainNavItem = {
 };
 
 export const mainNavItems: MainNavItem[] = [
-  { label: "Home",          href: "/",              external: false },
-  { label: "Services",      href: "/craft-catalog", external: false },
-  { label: "Service Areas", href: "/service-areas", external: false },
-  { label: "FAQs",          href: "/general-faqs",  external: false },
-  { label: "Contact",       href: "/contact-us",    external: false },
+  { label: "Home",     href: "/",              external: false },
+  { label: "Services", href: "/craft-catalog", external: false },
+  { label: "FAQs",     href: "/general-faqs",  external: false },
+  { label: "Contact",  href: "/contact-us",    external: false },
 ];

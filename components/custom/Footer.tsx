@@ -4,11 +4,10 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 
 const quickLinks = [
-  { label: "Our Services",               href: "/craft-catalog",   external: false },
-  { label: "Frequently Asked Questions", href: "/general-faqs",    external: false },
-  { label: "Service Areas",              href: "/service-areas",   external: false },
-  { label: "Before & After Gallery",     href: "/gallery",         external: false },
-  { label: "Contact Us",                 href: "/contact-us",      external: false },
+  { label: "Our Services",               href: "/craft-catalog", external: false },
+  { label: "Frequently Asked Questions", href: "/general-faqs",  external: false },
+  { label: "Before & After Gallery",     href: "/gallery",       external: false },
+  { label: "Contact Us",                 href: "/contact-us",    external: false },
 ];
 
 const socials: { icon: string; href: string; label: string }[] = [
@@ -67,8 +66,9 @@ export default function Footer() {
             <h3 className="footer__heading">Contact Us</h3>
             <div className="content-entry">
               <p>
+                40 Fulton St., New York, NY 10038<br />
                 <strong>(646) 392-7164</strong><br />
-                Manhattan &amp; All NYC Boroughs<br />
+                support@topplumbernyc.com<br />
                 Mon–Sun: 9am–9pm
               </p>
             </div>
@@ -81,24 +81,25 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Service Areas */}
+          {/* Service Areas summary */}
           <div
             className={`footer__widget footer__widget-subscribe fadeInUpS wow${vis}`}
-            style={{ animationDelay: "0.1s" }}
+            style={{ animationDelay: "0.2s" }}
           >
             <h3 className="footer__heading">Service Areas</h3>
             <div className="content-entry">
               <p>
-                Manhattan &bull; Brooklyn &bull; Queens &bull; The Bronx &bull; Staten Island<br />
-                If you&apos;re in New York City, we almost certainly cover your area. Call us to confirm.
+                Manhattan &bull; Brooklyn &bull; Queens<br />
+                The Bronx &bull; Staten Island<br />
+                If you&apos;re in NYC, we cover your area.
               </p>
             </div>
             <a
-              href="/service-areas"
+              href="/contact-us"
               className={`ia-link ia-link--arrow ia-link--white wow${vis}`}
             >
               <i className="icon-arrow-right ia-orange" />
-              <span>View All Areas</span>
+              <span>Get in Touch</span>
             </a>
           </div>
 

@@ -11,8 +11,8 @@ const stats = [
   {
     stat: "5★",
     label: "Rated 5 Stars — Licensed & Fully Insured",
-    linkText: "Contact Us",
-    href: "/contact-us",
+    linkText: "See Our Reviews",
+    href: "https://maps.app.goo.gl/wWD6vb3Uy2RXHzNz5",
   },
   {
     stat: "Free",

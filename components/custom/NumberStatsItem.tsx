@@ -22,6 +22,8 @@ const NumberStatsItem = ({ item }: NumberStatsItemProps) => {
             </h3>
             <Link
                 href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : "_self"}
+                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="ia-link ia-link--arrow flex flex-row items-center">
                 <div className="overflow-hidden -translate-x-6 group-hover:translate-x-6 group-hover:text-(--c-orange) flex flex-row duration-500">
                     <ArrowRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
