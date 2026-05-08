@@ -255,4 +255,5 @@ const programsData: ProgramsPageData = {
   partners: [],
 };
 
+export { programsData };
 export default programsData;
