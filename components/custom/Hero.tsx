@@ -108,13 +108,21 @@ export default function Hero() {
                   visible ? 'h-full scale-100' : 'h-0 scale-[1.2]',
                 ].join(' ')}
               >
-                {/* [TODO: Replace with A&E NYC Plumbing hero image or video] */}
-                <img
-                  src="https://www.topplumbernyc.com/wp-content/uploads/2025/06/Licensed-plumber-1024x683.jpg"
-                  alt="A&E NYC Plumbing — Licensed plumber in Manhattan"
+                {/* Video hero — Pixabay #339428, free to use (pixabay.com/service/license-summary/) */}
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  poster="https://www.topplumbernyc.com/wp-content/uploads/2025/06/Licensed-plumber-1024x683.jpg"
                   className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto max-w-[200%]"
                   style={{ objectFit: 'cover' }}
-                />
+                >
+                  <source
+                    src="https://cdn.pixabay.com/video/2017/01/15/7376-199627588_large.mp4"
+                    type="video/mp4"
+                  />
+                </video>
               </div>
             </div>
 

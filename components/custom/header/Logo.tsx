@@ -21,11 +21,13 @@ const Logo = ({ isFixed = false, isLoaded = false }: LogoProps) => {
           isLoaded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-[50px]",
         ].join(" ")}
       >
-        <span className="sr-only">NCCER</span>
+        <span className="sr-only">A&amp;E NYC Plumbing</span>
         <img
-          className="w-full"
-          src="/logos/logo-large.svg"
-          alt="Logo of NCCER"
+          className="w-full bg-white rounded px-2 py-1"
+          src="https://www.topplumbernyc.com/wp-content/uploads/2018/11/Plumbing-logo.png"
+          alt="A&E NYC Plumbing logo"
+          width="499"
+          height="114"
         />
       </Link>
     </div>

@@ -33,7 +33,7 @@ export default function Announcements() {
 
         <div className="relative z-20 front-announcements__content">
 
-          {/* Image */}
+              {/* Image */}
           <div className="front-announcements__image" ref={imageRef}>
             <div>
               <span
@@ -49,7 +49,6 @@ export default function Announcements() {
                   backgroundColor: '#50B6EA',
                 }}
               />
-              {/* [TODO: Replace with A&E NYC Plumbing team or job site photo] */}
             </div>
           </div>
 

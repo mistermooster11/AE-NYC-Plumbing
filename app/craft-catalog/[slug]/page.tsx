@@ -5,8 +5,26 @@ import CraftOverview   from "@/components/custom/craft-catalog/CraftOverview";
 import RelatedCrafts   from "@/components/custom/craft-catalog/RelatedCrafts";
 import { servicePages } from "@/data/craft-catalog/service-pages";
 
-// TODO: Replace PLACEHOLDER_BG with a real service photo per slug
-const PLACEHOLDER_BG = "/images/IMG_9688-1024x682.jpg";
+/** Hero background image per service slug — sourced from topplumbernyc.com */
+const SERVICE_BG: Record<string, string> = {
+  "drain-repair":             "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Drain-Repair.jpg",
+  "faucets-and-sinks":        "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Faucet-Repair.jpg",
+  "leak-detection":           "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Leak-Detection.jpg",
+  "toilet-repair":            "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Toilet.png",
+  "shower-and-tub":           "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Shower-and-Tub.png",
+  "water-heater-installation":"https://www.topplumbernyc.com/wp-content/uploads/2025/06/Hot-Water-Heaters-Installations.jpg",
+  "gas-line-services":        "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Gas-Line-Repair.jpg",
+  "piping-and-repiping":      "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Piping-and-Repiping.jpg",
+  "water-line-services":      "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Water-Lines.png",
+  "water-pressure-repair":    "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Water-Pressure.png",
+  "water-filtration":         "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Water-filter-Purification.png",
+  "kitchen-and-bath-plumbing":"https://www.topplumbernyc.com/wp-content/uploads/2025/06/Kitchen-Bath-Installation-Services.jpg",
+  "garbage-disposal":         "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Garbage-Disposal.jpg",
+  "dishwasher-repair":        "https://www.topplumbernyc.com/wp-content/uploads/2025/06/DIshwasher-repair.png",
+  "plumbing-fixtures":        "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Plumbing-Fixture.jpg",
+  "residential-plumbing":     "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Residential-Plumbing.jpg",
+};
+const FALLBACK_BG = "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Licensed-plumber-1024x683.jpg";
 
 /* Pre-render all known service slugs at build time */
 export function generateStaticParams() {
@@ -40,7 +58,7 @@ export default async function ServiceDetailPage({
     <main className="pt-76 max-[1150px]:pt-[6.2rem]">
       <CraftHero
         title={data.title}
-        bgImage={PLACEHOLDER_BG}
+        bgImage={SERVICE_BG[slug] ?? FALLBACK_BG}
         breadcrumbs={[
           { label: "Services", href: "/craft-catalog" },
           { label: data.title },

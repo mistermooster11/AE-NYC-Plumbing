@@ -31,12 +31,12 @@ export default function Footer() {
         <div className={`footer__logo fadeInUpS wow${vis}`}>
           <a href="/">
             <span className="sr-only">A&amp;E NYC Plumbing</span>
-            {/* [TODO: Replace with A&E NYC Plumbing logo] */}
             <img
-              src="/logos/logo-long.svg"
-              alt="A&E NYC Plumbing"
+              src="https://www.topplumbernyc.com/wp-content/uploads/2018/11/Plumbing-logo.png"
+              alt="A&E NYC Plumbing logo"
               width="220"
-              height="48"
+              height="50"
+              style={{ background: "#fff", borderRadius: "4px", padding: "4px 8px" }}
             />
           </a>
         </div>

@@ -44,7 +44,6 @@ export default function Difference() {
           {/* Right: photo */}
           <div className="w-full md:w-[54%] shrink-0 relative z-20">
             <div className="front-difference__image">
-              {/* [TODO: Replace with A&E NYC Plumbing job site or team photo] */}
               <VapeImage src="https://www.topplumbernyc.com/wp-content/uploads/2025/06/Licensed-plumber-1024x683.jpg" />
             </div>
           </div>

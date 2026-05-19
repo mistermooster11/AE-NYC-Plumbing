@@ -5,8 +5,7 @@ export const accordionItems = [
   {
     id: "accordion-0",
     title: "Drain Repair",
-    image: "/images/IMG_9688-1024x682.jpg",
-    // [TODO: Replace with A&E NYC Plumbing drain repair job photo]
+    image: "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Drain-Repair.jpg",
     description:
       "From slow kitchen sinks to full sewer line backups — A&E NYC Plumbing clears and repairs drains in Manhattan apartments, multi-unit buildings, and commercial spaces across all NYC boroughs.",
     learnHref: "/craft-catalog/drain-repair",
@@ -20,8 +19,7 @@ export const accordionItems = [
   {
     id: "accordion-1",
     title: "Leak Detection",
-    image: "/images/IMG_9750-1024x683.jpg",
-    // [TODO: Replace with A&E NYC Plumbing leak detection photo]
+    image: "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Leak-Detection.jpg",
     description:
       "Hidden leaks cause serious structural damage before you know they exist. Our licensed technicians locate leaks accurately in walls, floors, and ceilings — so we can fix the right spot without unnecessary demolition.",
     learnHref: "/craft-catalog/leak-detection",
@@ -35,8 +33,7 @@ export const accordionItems = [
   {
     id: "accordion-2",
     title: "Water Heater Installation",
-    image: "/images/iStock-530983109-1.jpg",
-    // [TODO: Replace with A&E NYC Plumbing water heater photo]
+    image: "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Hot-Water-Heaters-Installations.jpg",
     description:
       "Is your hot water unreliable or your energy bills climbing? A&E NYC Plumbing repairs and installs tank and tankless water heaters throughout Manhattan and NYC — with safe, code-compliant installation.",
     learnHref: "/craft-catalog/water-heater-installation",
@@ -50,8 +47,7 @@ export const accordionItems = [
   {
     id: "accordion-3",
     title: "Gas Line Services",
-    image: "/images/IMG_9688-1024x682.jpg",
-    // [TODO: Replace with A&E NYC Plumbing gas line photo]
+    image: "https://www.topplumbernyc.com/wp-content/uploads/2025/06/Gas-Line-Repair.jpg",
     description:
       "Gas line maintenance, repair, and installation — handled by licensed, insured technicians. Whether you need a new line run for an appliance or an emergency leak response, we prioritize safety and NYC code compliance.",
     learnHref: "/craft-catalog/gas-line-services",
