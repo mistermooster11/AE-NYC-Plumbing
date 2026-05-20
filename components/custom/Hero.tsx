@@ -108,21 +108,21 @@ export default function Hero() {
                   visible ? 'h-full scale-100' : 'h-0 scale-[1.2]',
                 ].join(' ')}
               >
-                {/* Video hero — Pixabay #339428, free to use (pixabay.com/service/license-summary/) */}
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  poster="https://www.topplumbernyc.com/wp-content/uploads/2025/06/Licensed-plumber-1024x683.jpg"
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto max-w-[200%]"
-                  style={{ objectFit: 'cover' }}
-                >
-                  <source
-                    src="https://cdn.pixabay.com/video/2017/01/15/7376-199627588_large.mp4"
-                    type="video/mp4"
-                  />
-                </video>
+                {/* Video hero — Cloudflare Stream, autoplay loop muted */}
+                <iframe
+                  src="https://customer-ip9lnkk65px0t3ak.cloudflarestream.com/137608cb5915472dc5909730ca1d7987/iframe?autoplay=true&loop=true&muted=true&controls=false&preload=auto"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  className="absolute border-0 pointer-events-none"
+                  style={{
+                    top: '50%',
+                    left: '50%',
+                    width: '177.8vh',   /* 16/9 * 100vh — đảm bảo luôn rộng hơn container */
+                    minWidth: '100%',
+                    height: '56.25vw', /* 9/16 * 100vw */
+                    minHeight: '100%',
+                    transform: 'translate(-50%, -50%)',
+                  }}
+                />
               </div>
             </div>
 
