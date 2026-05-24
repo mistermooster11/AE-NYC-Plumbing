@@ -354,7 +354,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/wp-assets/Title-Background-Image-scaled.webp");
+  background-image: url("/images/title-bg.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

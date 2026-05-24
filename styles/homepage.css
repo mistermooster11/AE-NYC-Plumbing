@@ -50,7 +50,7 @@
 .hero__bg-image {
   position: absolute;
   inset: 0;
-  background-image: url("/wp-assets/Title-Background-Image-scaled.webp");
+  background-image: url("/images/title-bg.webp");
   background-position: 50% 50%;
   background-size: cover;
   z-index: 0;
@@ -744,7 +744,7 @@
 /* ─── CTA FORM SECTION ───────────────────────────── */
 .cta-form {
   position: relative;
-  background-image: url("/images/cta-bg.png");
+  background-image: url("/images/about-plumbing.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1173,7 +1173,7 @@
 .need-services {
   position: relative;
   background-color: var(--color-secondary);
-  background-image: url('/images/need-services-bg.png');
+  background-image: url('/images/hero-bg-plumbing.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
