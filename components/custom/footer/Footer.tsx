@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer__brand">
           <Link href="/">
             <Image
-              src="/images/logo-light-bg.png"
+              src="/images/logo-dark-bg.png"
               alt="A&E NYC Plumbing"
               width={200}
               height={50}

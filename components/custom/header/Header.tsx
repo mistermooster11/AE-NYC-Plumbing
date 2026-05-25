@@ -54,7 +54,7 @@ export default function Header() {
         <div className="header__logo">
           <Link href="/">
             <Image
-              src="/images/logo-dark-bg.png"
+              src="/images/logo-light-bg.png"
               alt="A&E NYC Plumbing"
               width={200}
               height={44}
