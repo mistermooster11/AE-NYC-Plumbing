@@ -174,7 +174,8 @@
 /* ─── CONTACT SECTION ───────────────────────────── */
 .contact-section {
   position: relative;
-  background-image: url("/images/about-plumbing.jpg");
+  background-color: #ffffff;
+  background-image: url("/images/map-1.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
