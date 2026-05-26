@@ -12,7 +12,7 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: "/blog/signs-you-need-a-plumber-nyc",
-    image: "/images/blog-2.png",
+    image: "/images/service-emergency-plumbing.jpg",
     date: "15",
     monthYear: "May '26",
     category: "Plumbing Tips",
@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "/blog/water-heater-lifespan-nyc",
-    image: "/images/blog-3.png",
+    image: "/images/service-water-heater.jpg",
     date: "01",
     monthYear: "Apr '26",
     category: "Water Heaters",
