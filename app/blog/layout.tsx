@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "@/styles/programs.css";
 
 export const metadata: Metadata = {
   title: "Plumbing Tips & Resources",
