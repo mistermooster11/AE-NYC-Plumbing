@@ -7,6 +7,7 @@ import PageTransition from "@/components/custom/page-transition/PageTransition";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Script from "next/script";
+import SalePopup from "@/components/custom/popup/SalePopup"
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -83,6 +84,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body>
         <PageTransition />
+        <SalePopup businessName="A&E NYC Plumbing" expiryDate="June 7, 2026" trade="plumbers" />
         <Header />
         <main>{children}</main>
         <Footer />
