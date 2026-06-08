@@ -84,7 +84,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body>
         <PageTransition />
-        <SalePopup businessName="A&E NYC Plumbing" expiryDate="June 15, 2026" trade="plumbers" />
+        <SalePopup businessName="A&E NYC Plumbing" expiryDate="June 20, 2026" trade="plumbers" />
         <Header />
         <main>{children}</main>
         <Footer />
